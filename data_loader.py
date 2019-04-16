@@ -1,3 +1,4 @@
+import googlemaps
 import json
 from pprint import pprint
 
@@ -8,4 +9,8 @@ PLACES_API_KEY: ''
 with open('secrets.json') as secrets:
     data = json.load(secrets)
     PLACES_API_KEY = data['api_keys']['google_places']
+
+gmaps = googlemaps.Client(key=PLACES_API_KEY)
+
+response = gmaps.places(query='restaurant worcester mass')
 
