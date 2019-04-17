@@ -1,6 +1,14 @@
 # Secrets file
 secrets.json
 
+# Things?
+/pip-selfcheck.json
+
+# Large/raw data
+/data/business.json
+/data/yelp_dataset
+/data/yelp_dataset.tar
+
 ## Github Generated
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -106,4 +114,3 @@ venv.bak/
 
 # mypy
 .mypy_cache/
-/pip-selfcheck.json
