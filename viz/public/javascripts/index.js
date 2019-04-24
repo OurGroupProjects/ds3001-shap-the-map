@@ -21,12 +21,13 @@ const makeRequest = function (url, method) {
     request.open(method, url, true);
     request.send();
   })
-}
+};
 
-Promise.all([makeRequest("/foodRankData", "GET")]).then(onDataLoad);
+Promise.all([makeRequest("/foodRankData", "GET"), makeRequest("/foodLocData", "GET")]).then(onDataLoad);
 
 function onDataLoad(e) {
   const stateData = JSON.parse(e[0].responseText);
+  const foodLocData = e[1].responseText.split(/\r\n+/g).map(x => x.split(","));
 
   L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoidGd3aWxlcyIsImEiOiJjanV2bzhvdTEwM3NnNGRwYmIzd3Ixd3h5In0.jFIY4jpuTwWO4F_Pvbz31w', {
     maxZoom: 18,
