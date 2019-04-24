@@ -3,13 +3,30 @@ var map = L.map('map').setView([37.8, -96], 4);
 var info = L.control();
 
 
-let dataReq = new XMLHttpRequest();
-dataReq.addEventListener("load", onDataLoad);
-dataReq.open("GET", "/data");
-dataReq.send();
+const makeRequest = function (url, method) {
+  let request = new XMLHttpRequest();
+  return new Promise(function (resolve, reject) {
+    request.onreadystatechange = function () {
+      if (request.readyState !== 4) return;
+      if (request.status >= 200 && request.status < 300) {
+        resolve(request)
+      } else {
+        reject({
+          status: request.status,
+          statusText: request.statusText
+        });
+      }
+    };
 
-function onDataLoad() {
-  const stateData = JSON.parse(this.responseText);
+    request.open(method, url, true);
+    request.send();
+  })
+}
+
+Promise.all([makeRequest("/foodRankData", "GET")]).then(onDataLoad);
+
+function onDataLoad(e) {
+  const stateData = JSON.parse(e[0].responseText);
 
   L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoidGd3aWxlcyIsImEiOiJjanV2bzhvdTEwM3NnNGRwYmIzd3Ixd3h5In0.jFIY4jpuTwWO4F_Pvbz31w', {
     maxZoom: 18,

@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.get('/data', function(req, res, next) {
+router.get('/foodRankData', function(req, res, next) {
   console.log(stateData);
   res.send(stateData);
 });
