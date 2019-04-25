@@ -61,19 +61,7 @@ function onDataLoad(e) {
 
   info.addTo(map);
 
-  document.body.onkeydown = (e) => {
-    if (e.key === "d") {
-      document.styleSheets[1].cssRules[2].style.pointerEvents="auto";
-    }
-  };
 
-  document.body.onkeyup = function (e) {
-    if (e.key === " ") {
-      map.setView([37.8, -96], 4);
-    } else if (e.key === "d") {
-      document.styleSheets[1].cssRules[2].style.pointerEvents="none";
-    }
-  };
 
   geojson = L.geoJson(statesData, {
     style: style,
@@ -101,13 +89,38 @@ function onDataLoad(e) {
   };
   legend.addTo(map);
 
+  let foodCircles = [];
+
   for (let store of foodLocData) {
     if(!store[Headers.LATITUDE] || !store[Headers.LONGITUDE]){
       console.log("PANIC");
     }
-    L.circle([store[Headers.LATITUDE], store[Headers.LONGITUDE]], { renderer: markerRenderer }).addTo(map).bindPopup(store[Headers.FULL_NAME])
+    const foodCircle = L.circleMarker([store[Headers.LATITUDE], store[Headers.LONGITUDE]],
+        {
+          renderer: markerRenderer,
+        });
+    foodCircle.setRadius(.25);
+    foodCircles.push(foodCircle);
+    foodCircle.addTo(map).bindPopup(store[Headers.FULL_NAME])
   }
 
+  document.body.onkeydown = (e) => {
+    if (e.key === "d") {
+      for (let i = 0; i < foodCircles.length; i++)
+        foodCircles[i].setRadius(7);
+    }
+    document.styleSheets[1].cssRules[2].style.pointerEvents="auto";
+  };
+
+  document.body.onkeyup = function (e) {
+    if (e.key === " ") {
+      map.setView([37.8, -96], 4);
+    } else if (e.key === "d") {
+      for (let i = 0; i < foodCircles.length; i++)
+        foodCircles[i].setRadius(.25);
+    }
+    document.styleSheets[1].cssRules[2].style.pointerEvents="none";
+  };
 
 }
 
