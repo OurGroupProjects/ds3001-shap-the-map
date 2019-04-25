@@ -1,6 +1,8 @@
 let geojson;
-var map = L.map('map').setView([37.8, -96], 4);
-var info = L.control();
+let map;
+const info = L.control();
+const Headers = Object.freeze({"NAME":0, "CITY":1, "PROVINCE":2, "POSTALCODE":3, "LATITUDE":4, "LONGITUDE":5, "FULL_NAME":6});
+
 
 
 const makeRequest = function (url, method) {
@@ -13,7 +15,6 @@ const makeRequest = function (url, method) {
       } else {
         reject({
           status: request.status,
-          statusText: request.statusText
         });
       }
     };
@@ -27,7 +28,26 @@ Promise.all([makeRequest("/foodRankData", "GET"), makeRequest("/foodLocData", "G
 
 function onDataLoad(e) {
   const stateData = JSON.parse(e[0].responseText);
-  const foodLocData = e[1].responseText.split(/\r\n+/g).map(x => x.split(","));
+  const foodLocData = e[1].responseText.split(/\r\n+/g).slice(1).map(x => x.split(","));
+
+  let storeMarkers = [];
+  for (let store of foodLocData) {
+    if(!store[Headers.LATITUDE] || !store[Headers.LONGITUDE]){
+      console.log("PANIC");
+    }
+    storeMarkers.push(L.marker([store[Headers.LATITUDE], store[Headers.LONGITUDE]]))
+  }
+  const storeMarkersLayer = L.layerGroup(storeMarkers);
+
+  map = L.map('map', {
+    layers: [storeMarkersLayer]
+  }).setView([37.8, -96], 4);
+
+  const overlayMaps = {
+    "stores":storeMarkersLayer
+  }
+
+  L.control.layers(overlayMaps).addTo(map);
 
   L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoidGd3aWxlcyIsImEiOiJjanV2bzhvdTEwM3NnNGRwYmIzd3Ixd3h5In0.jFIY4jpuTwWO4F_Pvbz31w', {
     maxZoom: 18,
@@ -36,6 +56,7 @@ function onDataLoad(e) {
         'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
     id: 'mapbox.light'
   }).addTo(map);
+
 
 
 // control that shows state info on hover
