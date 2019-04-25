@@ -96,7 +96,7 @@ function onDataLoad(e) {
     if(!store[Headers.LATITUDE] || !store[Headers.LONGITUDE]){
       console.log("PANIC");
     }
-    L.circleMarker([store[Headers.LATITUDE], store[Headers.LONGITUDE]], { renderer: markerRenderer }).addTo(map).bindPopup(store[Headers.FULL_NAME])
+    L.circle([store[Headers.LATITUDE], store[Headers.LONGITUDE]], { renderer: markerRenderer }).addTo(map).bindPopup(store[Headers.FULL_NAME])
   }
 
 
