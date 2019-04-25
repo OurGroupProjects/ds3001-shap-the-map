@@ -1,3 +1,4 @@
+let markersOn = false;
 let geojson;
 let map;
 const info = L.control();
@@ -26,12 +27,15 @@ Promise.all([makeRequest("/foodRankData", "GET"), makeRequest("/foodLocData", "G
 
 
 function onDataLoad(e) {
+  map = L.map('map').setView([37.8, -96], 4);
+  const geoJSONPane = map.createPane("geoPane");
+  const markerPane = map.createPane("markerPane");
   const stateData = JSON.parse(e[0].responseText);
   const foodLocData = e[1].responseText.split(/\r\n+/g).slice(1).map(x => x.split(","));
   // switch canvas to svg for diesired outcome (SUUUPER LAGGY tho), have to change pointer-event css to visiblePainted
-  const markerRenderer = L.canvas({padding:0.5});
-  map = L.map('map').setView([37.8, -96], 4);
-  let geoJSONPane = map.createPane("geoPane");
+  const markerRenderer = L.canvas({padding:0.5, pane:"markerPane"});
+
+
   geoJSONPane.style.zIndex = 350;
 
   // Draw states
@@ -85,12 +89,12 @@ function onDataLoad(e) {
   // Setup Markers
   let foodCircles = [];
   for (let store of foodLocData) {
-    let markerColor = "#999999";
+    let markerColor = "#99999980";
     if(!store[HeadersEnum.LATITUDE] || !store[HeadersEnum.LONGITUDE]){
       console.log("PANIC");
     }
     if(store[HeadersEnum.NAME] === "McDonald's") {
-      markerColor = "#000000"
+      markerColor = "#00000080"
     }
     const foodCircle = L.circleMarker([store[HeadersEnum.LATITUDE], store[HeadersEnum.LONGITUDE]],
         {
@@ -165,20 +169,31 @@ function onEachFeature(feature, layer) {
 initListeners = (foodCircles) => {
   document.body.onkeydown = (e) => {
     if (e.key === "d") {
-      for (let i = 0; i < foodCircles.length; i++)
+      for (let i = 0; i < foodCircles.length; i++) {
         foodCircles[i].setRadius(7);
+      }
+      document.styleSheets[1].cssRules[2].style.pointerEvents="auto";
+    } else if (e.key === "p") {
+      if (markersOn === false) {
+        document.styleSheets[1].cssRules[3].style.display = "block";
+      } else {
+        document.styleSheets[1].cssRules[3].style.display = "none";
+      }
+      markersOn = !markersOn;
     }
-    document.styleSheets[1].cssRules[2].style.pointerEvents="auto";
+
   };
 
   document.body.onkeyup = function (e) {
     if (e.key === " ") {
       map.setView([37.8, -96], 4);
     } else if (e.key === "d") {
-      for (let i = 0; i < foodCircles.length; i++)
+      for (let i = 0; i < foodCircles.length; i++) {
         foodCircles[i].setRadius(.25);
+      }
+      document.styleSheets[1].cssRules[2].style.pointerEvents="none";
     }
-    document.styleSheets[1].cssRules[2].style.pointerEvents="none";
+
   };
 };
 
