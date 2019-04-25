@@ -1,30 +1,12 @@
 let geojson;
 let map;
 const info = L.control();
-const Headers = Object.freeze({"NAME":0, "CITY":1, "PROVINCE":2, "POSTALCODE":3, "LATITUDE":4, "LONGITUDE":5, "FULL_NAME":6});
+const HeadersEnum = Object.freeze({"NAME":0, "CITY":1, "PROVINCE":2, "POSTALCODE":3, "LATITUDE":4, "LONGITUDE":5, "FULL_NAME":6});
 
 
-
-const makeRequest = function (url, method) {
-  let request = new XMLHttpRequest();
-  return new Promise(function (resolve, reject) {
-    request.onreadystatechange = function () {
-      if (request.readyState !== 4) return;
-      if (request.status >= 200 && request.status < 300) {
-        resolve(request)
-      } else {
-        reject({
-          status: request.status,
-        });
-      }
-    };
-
-    request.open(method, url, true);
-    request.send();
-  })
-};
-
+// Load data files, then draw map
 Promise.all([makeRequest("/foodRankData", "GET"), makeRequest("/foodLocData", "GET")]).then(onDataLoad);
+
 
 function onDataLoad(e) {
   const stateData = JSON.parse(e[0].responseText);
@@ -35,6 +17,7 @@ function onDataLoad(e) {
   let geoJSONPane = map.createPane("geoPane");
   geoJSONPane.style.zIndex = 350;
 
+  // Draw states
   L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoidGd3aWxlcyIsImEiOiJjanV2bzhvdTEwM3NnNGRwYmIzd3Ixd3h5In0.jFIY4jpuTwWO4F_Pvbz31w', {
     maxZoom: 18,
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
@@ -43,25 +26,18 @@ function onDataLoad(e) {
     id: 'mapbox.light'
   }).addTo(map);
 
-
-
-// control that shows state info on hover
-
+  // Set up on hover
   info.onAdd = function (map) {
     this._div = L.DomUtil.create('div', 'info');
     this.update();
     return this._div;
   };
-
   info.update = function (props) {
     this._div.innerHTML = '<h4>US Population Density</h4>' + (props ?
         '<b>' + props.name + '</b><br />' + props.density + ' people / mi<sup>2</sup>'
         : 'Hover over a state');
   };
-
   info.addTo(map);
-
-
 
   geojson = L.geoJson(statesData, {
     style: style,
@@ -70,8 +46,8 @@ function onDataLoad(e) {
   }).addTo(map);
   map.attributionControl.addAttribution('Population data &copy; <a href="http://census.gov/">US Census Bureau</a>');
 
+  // Draw legend
   var legend = L.control({position: 'bottomleft'});
-
   legend.onAdd = function (map) {
     var div = L.DomUtil.create('div', 'info legend'),
         grades = [0, 10, 20, 50, 100, 200, 500, 1000],
@@ -89,39 +65,22 @@ function onDataLoad(e) {
   };
   legend.addTo(map);
 
+  // Setup Markers
   let foodCircles = [];
-
   for (let store of foodLocData) {
-    if(!store[Headers.LATITUDE] || !store[Headers.LONGITUDE]){
+    if(!store[HeadersEnum.LATITUDE] || !store[HeadersEnum.LONGITUDE]){
       console.log("PANIC");
     }
-    const foodCircle = L.circleMarker([store[Headers.LATITUDE], store[Headers.LONGITUDE]],
+    const foodCircle = L.circleMarker([store[HeadersEnum.LATITUDE], store[HeadersEnum.LONGITUDE]],
         {
           renderer: markerRenderer,
         });
     foodCircle.setRadius(.25);
     foodCircles.push(foodCircle);
-    foodCircle.addTo(map).bindPopup(store[Headers.FULL_NAME])
+    foodCircle.addTo(map).bindPopup(store[HeadersEnum.FULL_NAME])
   }
 
-  document.body.onkeydown = (e) => {
-    if (e.key === "d") {
-      for (let i = 0; i < foodCircles.length; i++)
-        foodCircles[i].setRadius(7);
-    }
-    document.styleSheets[1].cssRules[2].style.pointerEvents="auto";
-  };
-
-  document.body.onkeyup = function (e) {
-    if (e.key === " ") {
-      map.setView([37.8, -96], 4);
-    } else if (e.key === "d") {
-      for (let i = 0; i < foodCircles.length; i++)
-        foodCircles[i].setRadius(.25);
-    }
-    document.styleSheets[1].cssRules[2].style.pointerEvents="none";
-  };
-
+  initListeners(foodCircles);
 }
 
 // get color depending on population density value
@@ -180,3 +139,42 @@ function onEachFeature(feature, layer) {
     click: zoomToFeature
   });
 }
+
+initListeners = (foodCircles) => {
+  document.body.onkeydown = (e) => {
+    if (e.key === "d") {
+      for (let i = 0; i < foodCircles.length; i++)
+        foodCircles[i].setRadius(7);
+    }
+    document.styleSheets[1].cssRules[2].style.pointerEvents="auto";
+  };
+
+  document.body.onkeyup = function (e) {
+    if (e.key === " ") {
+      map.setView([37.8, -96], 4);
+    } else if (e.key === "d") {
+      for (let i = 0; i < foodCircles.length; i++)
+        foodCircles[i].setRadius(.25);
+    }
+    document.styleSheets[1].cssRules[2].style.pointerEvents="none";
+  };
+};
+
+const makeRequest = function (url, method) {
+  let request = new XMLHttpRequest();
+  return new Promise(function (resolve, reject) {
+    request.onreadystatechange = function () {
+      if (request.readyState !== 4) return;
+      if (request.status >= 200 && request.status < 300) {
+        resolve(request)
+      } else {
+        reject({
+          status: request.status,
+        });
+      }
+    };
+
+    request.open(method, url, true);
+    request.send();
+  })
+};
