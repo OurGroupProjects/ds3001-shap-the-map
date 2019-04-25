@@ -29,6 +29,7 @@ Promise.all([makeRequest("/foodRankData", "GET"), makeRequest("/foodLocData", "G
 function onDataLoad(e) {
   const stateData = JSON.parse(e[0].responseText);
   const foodLocData = e[1].responseText.split(/\r\n+/g).slice(1).map(x => x.split(","));
+  // switch canvas to svg for diesired outcome (SUUUPER LAGGY tho), have to change pointer-event css to visiblePainted
   const markerRenderer = L.canvas({padding:0.5});
   map = L.map('map').setView([37.8, -96], 4);
   let geoJSONPane = map.createPane("geoPane");
