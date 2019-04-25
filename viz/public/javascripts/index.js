@@ -29,25 +29,10 @@ Promise.all([makeRequest("/foodRankData", "GET"), makeRequest("/foodLocData", "G
 function onDataLoad(e) {
   const stateData = JSON.parse(e[0].responseText);
   const foodLocData = e[1].responseText.split(/\r\n+/g).slice(1).map(x => x.split(","));
-
-  let storeMarkers = [];
-  for (let store of foodLocData) {
-    if(!store[Headers.LATITUDE] || !store[Headers.LONGITUDE]){
-      console.log("PANIC");
-    }
-    storeMarkers.push(L.marker([store[Headers.LATITUDE], store[Headers.LONGITUDE]]))
-  }
-  const storeMarkersLayer = L.layerGroup(storeMarkers);
-
-  map = L.map('map', {
-    layers: [storeMarkersLayer]
-  }).setView([37.8, -96], 4);
-
-  const overlayMaps = {
-    "stores":storeMarkersLayer
-  }
-
-  L.control.layers(overlayMaps).addTo(map);
+  const markerRenderer = L.canvas({padding:0.5});
+  map = L.map('map').setView([37.8, -96], 4);
+  let geoJSONPane = map.createPane("geoPane");
+  geoJSONPane.style.zIndex = 350;
 
   L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoidGd3aWxlcyIsImEiOiJjanV2bzhvdTEwM3NnNGRwYmIzd3Ixd3h5In0.jFIY4jpuTwWO4F_Pvbz31w', {
     maxZoom: 18,
@@ -79,11 +64,12 @@ function onDataLoad(e) {
     if (e.key === " ") {
       map.setView([37.8, -96], 4);
     }
-  }
+  };
 
   geojson = L.geoJson(statesData, {
     style: style,
-    onEachFeature: onEachFeature
+    onEachFeature: onEachFeature,
+    pane: "geoPane"
   }).addTo(map);
   map.attributionControl.addAttribution('Population data &copy; <a href="http://census.gov/">US Census Bureau</a>');
 
@@ -105,6 +91,15 @@ function onDataLoad(e) {
     return div;
   };
   legend.addTo(map);
+
+  for (let store of foodLocData) {
+    if(!store[Headers.LATITUDE] || !store[Headers.LONGITUDE]){
+      console.log("PANIC");
+    }
+    L.circleMarker([store[Headers.LATITUDE], store[Headers.LONGITUDE]], { renderer: markerRenderer }).addTo(map).bindPopup(store[Headers.FULL_NAME])
+  }
+
+
 }
 
 // get color depending on population density value
