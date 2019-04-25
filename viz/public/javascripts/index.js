@@ -3,6 +3,19 @@ let geojson;
 let map;
 const info = L.control();
 const HeadersEnum = Object.freeze({"NAME":0, "CITY":1, "PROVINCE":2, "POSTALCODE":3, "LATITUDE":4, "LONGITUDE":5, "FULL_NAME":6});
+const restColors = {
+  "McDonald's": "#1f77b4",
+  "Arby's": "#ff7f0e",
+  "Burger King": "#2ca02c",
+  "Domino's Pizza": "#d62728",
+  "SONIC Drive In": "#9467bd",
+  "Taco John's": "#8c564b",
+  "Subway": "#e377c2",
+  "KFC": "#7f7f7f",
+  "Taco Bell": "#bcbd22",
+  "Wendy's": "#17becf"
+}
+
 const makeRequest = function (url, method) {
   let request = new XMLHttpRequest();
   return new Promise(function (resolve, reject) {
@@ -89,12 +102,12 @@ function onDataLoad(e) {
   // Setup Markers
   let foodCircles = [];
   for (let store of foodLocData) {
-    let markerColor = "#99999980";
+    let markerColor = "#00000080";
     if(!store[HeadersEnum.LATITUDE] || !store[HeadersEnum.LONGITUDE]){
       console.log("PANIC");
     }
-    if(store[HeadersEnum.NAME] === "McDonald's") {
-      markerColor = "#00000080"
+    if(store[HeadersEnum.NAME] in restColors) {
+      markerColor = restColors[store[HeadersEnum.NAME]];
     }
     const foodCircle = L.circleMarker([store[HeadersEnum.LATITUDE], store[HeadersEnum.LONGITUDE]],
         {
@@ -108,7 +121,6 @@ function onDataLoad(e) {
 
   initListeners(foodCircles);
 }
-
 // get color depending on population density value
 function getColor(d) {
   return d > 1000 ? '#0c2c84' :
