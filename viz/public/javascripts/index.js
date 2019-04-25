@@ -85,12 +85,17 @@ function onDataLoad(e) {
   // Setup Markers
   let foodCircles = [];
   for (let store of foodLocData) {
+    let markerColor = "#999999";
     if(!store[HeadersEnum.LATITUDE] || !store[HeadersEnum.LONGITUDE]){
       console.log("PANIC");
+    }
+    if(store[HeadersEnum.NAME] === "McDonald's") {
+      markerColor = "#000000"
     }
     const foodCircle = L.circleMarker([store[HeadersEnum.LATITUDE], store[HeadersEnum.LONGITUDE]],
         {
           renderer: markerRenderer,
+          color: markerColor
         });
     foodCircle.setRadius(.25);
     foodCircles.push(foodCircle);
