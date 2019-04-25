@@ -2,7 +2,24 @@ let geojson;
 let map;
 const info = L.control();
 const HeadersEnum = Object.freeze({"NAME":0, "CITY":1, "PROVINCE":2, "POSTALCODE":3, "LATITUDE":4, "LONGITUDE":5, "FULL_NAME":6});
+const makeRequest = function (url, method) {
+  let request = new XMLHttpRequest();
+  return new Promise(function (resolve, reject) {
+    request.onreadystatechange = function () {
+      if (request.readyState !== 4) return;
+      if (request.status >= 200 && request.status < 300) {
+        resolve(request)
+      } else {
+        reject({
+          status: request.status,
+        });
+      }
+    };
 
+    request.open(method, url, true);
+    request.send();
+  })
+};
 
 // Load data files, then draw map
 Promise.all([makeRequest("/foodRankData", "GET"), makeRequest("/foodLocData", "GET")]).then(onDataLoad);
@@ -160,21 +177,4 @@ initListeners = (foodCircles) => {
   };
 };
 
-const makeRequest = function (url, method) {
-  let request = new XMLHttpRequest();
-  return new Promise(function (resolve, reject) {
-    request.onreadystatechange = function () {
-      if (request.readyState !== 4) return;
-      if (request.status >= 200 && request.status < 300) {
-        resolve(request)
-      } else {
-        reject({
-          status: request.status,
-        });
-      }
-    };
 
-    request.open(method, url, true);
-    request.send();
-  })
-};
