@@ -61,9 +61,17 @@ function onDataLoad(e) {
 
   info.addTo(map);
 
+  document.body.onkeydown = (e) => {
+    if (e.key === "d") {
+      document.styleSheets[1].cssRules[2].style.pointerEvents="auto";
+    }
+  };
+
   document.body.onkeyup = function (e) {
     if (e.key === " ") {
       map.setView([37.8, -96], 4);
+    } else if (e.key === "d") {
+      document.styleSheets[1].cssRules[2].style.pointerEvents="none";
     }
   };
 
