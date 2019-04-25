@@ -1,80 +1,27 @@
 import sys
 import csv
 import json
+import pandas as pd
 from pprint import pprint
 from fuzzywuzzy import process, fuzz
 
-# Json file to start with
-json_file = 'business.json'
+# File to start with
+input_file = 'kaggle_fast-food.csv'
 
 # Output version
-out_version = '_v3'
-# CSV file to write to
-csv_file = 'business'+ out_version +'.csv'
+out_version = '_v1'
+# File to write to
+output_file = 'fast-food_filtered'+ out_version +'.csv'
 
-# What parts of the json to keep
+# What parts of the original csv to keep
 columns = [
-    'business_id',
     'name',
     'city',
-    'state',
-    'postal_code',
+    'province',
+    'postalCode',
     'latitude',
     'longitude',
 ]
-
-# Chains we are looking at
-chains = ["McDonalds","Burger King","Wendy's","Chick Fil A","Five Guys","Arby's","Taco Bell",
-          "Dairy Queen","KFC","Quiznos","Subway","Panera Bread","Popeyes","Taco del mar",
-          "Chipotle","Wings over","A&W","White Castle","Sonic","QDOBA Mexican Eats","D'Angelos",
-          "T-N-T Fast Food","Pollo Tropical","Checkers","Shake Shack","Tossed","Miami Subs Grill",
-          "Church's Chicken","Steak 'n Shake","Pita Pit","Jersey Mike's Subs",
-          "Zaxby's Chicken Fingers & Buffalo Wings","Hardee's","RaceTrac","Firehouse Subs",
-          "Jimmy Johns","Krystal","Captain D's","Jack's","Del Taco","Ward's Restaurant",
-          "Chicken Express","Jack in the Box","Panda Express","Indi's Fast Food","Carl's Jr",
-          "Wienerschnitzel","Arctic Circle","Taco John's","Culver's","Long John Silver's",
-          "Good Times Burgers & Frozen Custard","Roy Rogers","Teddy's Bigger Burgers"
-]
-
-fuzzy_cutoff = 90
-use_fuzzy = True
-min_len_for_fuzzy = 5
-
-chain_matches = {key: {'total': 0, 'straight_matches': 0, 'fuzz_matches': {}} for key in chains}
-
-# Retrieve relevent attributes from json entry
-def parse_entry(entry):
-    row = []
-    for col in columns:
-        if col not in entry or entry[col] is None or entry[col] == '':
-            row.append('')
-            if not col == 'postal_code':
-                    print('error with entry: {} in {}, missing {}'.format(entry['name'], entry['city'], col))
-        else:
-            row.append(entry[col])
-    return row
-
-# Decide if we will use the entry (is a relevent food chain)
-def filter_entry(entry):
-    name = entry['name']
-    if 'categories' not in entry or entry['categories'] is None \
-       or 'Restaurant' not in entry['categories']:
-        return False
-    if name in chains:
-        chain_matches[name]['total']+=1
-        chain_matches[name]['straight_matches']+=1
-        return True
-    elif use_fuzzy and len(name) >= min_len_for_fuzzy:
-        chain_name, ratio = process.extractOne(name, chains, scorer=fuzz.partial_ratio)
-        if ratio > fuzzy_cutoff and len(chain_name) >= min_len_for_fuzzy:
-            # print("Similarity of {} between {} and {}".format(ratio, name, chain_name))
-            if name in chain_matches[chain_name]['fuzz_matches'].keys():
-                chain_matches[chain_name]['fuzz_matches'][name]+=1
-            else:
-                chain_matches[chain_name]['fuzz_matches'][name] = 1
-            chain_matches[chain_name]['total']+=1
-            return True
-    return False
 
 # Progress bar code take from https://gist.github.com/vladignatyev/06860ec2040cb497f0f3
 def progress(count, total, status=''):
@@ -85,19 +32,18 @@ def progress(count, total, status=''):
     bar = '=' * filled_len + '-' * (bar_len - filled_len)
 
     sys.stdout.write('\r[%s] %s%s ...%s\r' % (bar, percents, '%', status))
-    sys.stdout.flush()  
+    sys.stdout.flush()
 
+def clean_names(row):
+    real_name = row['name']
+    row['full_name'] = real_name
+    if real_name in name_map_dict:
+        row['name'] = name_map_dict[real_name]
+    return row
 
-with open(csv_file, 'w+', encoding='UTF8', newline='') as fout:
-    csv_out = csv.writer(fout)
-    csv_out.writerow(columns)
-    total_lines = sum(1 for line in open(json_file, encoding='UTF8'))
-    with open(json_file, encoding='UTF8') as fin:
-        for i, line in enumerate(fin):
-            progress(i, total_lines, status='Parsing business.json')
-            entry = json.loads(line)
-            if filter_entry(entry):
-                row = parse_entry(entry)
-                csv_out.writerow(row)
+#***** Main code starts here *****#
+name_map_dict = eval(open('location_name_remapping.txt').read())
 
-pprint(chain_matches, open('chain_matches'+out_version+'.txt', 'w'))
+data = pd.read_csv(input_file)[columns].reset_index()
+data = data.apply(clean_names, axis=1).drop('index', 1)
+data.to_csv(output_file, index=False)
