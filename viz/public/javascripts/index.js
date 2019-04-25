@@ -1,6 +1,9 @@
 let markersOn = false;
 let geojson;
 let map;
+let stateData;
+const minRatio = 0.111111111111111111;
+const maxRatio = 0.37209302325581395;
 const info = L.control();
 const HeadersEnum = Object.freeze({"NAME":0, "CITY":1, "PROVINCE":2, "POSTALCODE":3, "LATITUDE":4, "LONGITUDE":5, "FULL_NAME":6});
 const restColors = {
@@ -14,7 +17,70 @@ const restColors = {
   "KFC": "#7f7f7f",
   "Taco Bell": "#bcbd22",
   "Wendy's": "#17becf"
-}
+};
+
+const nameToAbrev =
+    {
+      'Alabama': 'AL',
+      'Alaska': 'AK',
+      'American Samoa': 'AS',
+      'Arizona': 'AZ',
+      'Arkansas': 'AR',
+      'California': 'CA',
+      'Colorado': 'CO',
+      'Connecticut': 'CT',
+      'Delaware': 'DE',
+      'District of Columbia': 'DC',
+      'Federated States Of Micronesia': 'FM',
+      'Florida': 'FL',
+      'Georgia': 'GA',
+      'Guam': 'GU',
+      'Hawaii': 'HI',
+      'Idaho': 'ID',
+      'Illinois': 'IL',
+      'Indiana': 'IN',
+      'Iowa': 'IA',
+      'Kansas': 'KS',
+      'Kentucky': 'KY',
+      'Louisiana': 'LA',
+      'Maine': 'ME',
+      'Marshall Islands': 'MH',
+      'Maryland': 'MD',
+      'Massachusetts': 'MA',
+      'Michigan': 'MI',
+      'Minnesota': 'MN',
+      'Mississippi': 'MS',
+      'Missouri': 'MO',
+      'Montana': 'MT',
+      'Nebraska': 'NE',
+      'Nevada': 'NV',
+      'New Hampshire': 'NH',
+      'New Jersey': 'NJ',
+      'New Mexico': 'NM',
+      'New York': 'NY',
+      'North Carolina': 'NC',
+      'North Dakota': 'ND',
+      'Northern Mariana Islands': 'MP',
+      'Ohio': 'OH',
+      'Oklahoma': 'OK',
+      'Oregon': 'OR',
+      'Palau': 'PW',
+      'Pennsylvania': 'PA',
+      'Puerto Rico': 'PR',
+      'Rhode Island': 'RI',
+      'South Carolina': 'SC',
+      'South Dakota': 'SD',
+      'Tennessee': 'TN',
+      'Texas': 'TX',
+      'Utah': 'UT',
+      'Vermont': 'VT',
+      'Virgin Islands': 'VI',
+      'Virginia': 'VA',
+      'Washington': 'WA',
+      'West Virginia': 'WV',
+      'Wisconsin': 'WI',
+      'Wyoming': 'WY'
+    };
 
 const makeRequest = function (url, method) {
   let request = new XMLHttpRequest();
@@ -43,7 +109,7 @@ function onDataLoad(e) {
   map = L.map('map').setView([37.8, -96], 4);
   const geoJSONPane = map.createPane("geoPane");
   const markerPane = map.createPane("markerPane");
-  const stateData = JSON.parse(e[0].responseText);
+  stateData = JSON.parse(e[0].responseText);
   const foodLocData = e[1].responseText.split(/\r\n+/g).slice(1).map(x => x.split(","));
   // switch canvas to svg for diesired outcome (SUUUPER LAGGY tho), have to change pointer-event css to visiblePainted
   const markerRenderer = L.canvas({padding:0.5, pane:"markerPane"});
@@ -80,25 +146,6 @@ function onDataLoad(e) {
   }).addTo(map);
   map.attributionControl.addAttribution('Population data &copy; <a href="http://census.gov/">US Census Bureau</a>');
 
-  // Draw legend
-  var legend = L.control({position: 'bottomleft'});
-  legend.onAdd = function (map) {
-    var div = L.DomUtil.create('div', 'info legend'),
-        grades = [0, 10, 20, 50, 100, 200, 500, 1000],
-        labels = [],
-        from, to;
-    for (var i = 0; i < grades.length; i++) {
-      from = grades[i];
-      to = grades[i + 1];
-      labels.push(
-          '<i style="background:' + getColor(from + 1) + '"></i> ' +
-          from + (to ? '&ndash;' + to : '+'));
-    }
-    div.innerHTML = labels.join('<br>');
-    return div;
-  };
-  legend.addTo(map);
-
   // Setup Markers
   let foodCircles = [];
   for (let store of foodLocData) {
@@ -116,21 +163,10 @@ function onDataLoad(e) {
         });
     foodCircle.setRadius(.25);
     foodCircles.push(foodCircle);
-    foodCircle.addTo(map).bindPopup(store[HeadersEnum.FULL_NAME])
+    foodCircle.addTo(map).bindPopup("<b>" + store[HeadersEnum.FULL_NAME] + "</b></br>" + store[HeadersEnum.CITY] + ", " + store[HeadersEnum.PROVINCE])
   }
 
   initListeners(foodCircles);
-}
-// get color depending on population density value
-function getColor(d) {
-  return d > 1000 ? '#0c2c84' :
-      d > 500 ? '#225ea8' :
-          d > 200 ? '#1d91c0' :
-              d > 100 ? '#41b6c4' :
-                  d > 50 ? '#7fcdbb' :
-                      d > 20 ? '#c7e9b4' :
-                          d > 10 ? '#edf8b1' :
-                              '#ffffd9';
 }
 
 function style(feature) {
@@ -139,8 +175,22 @@ function style(feature) {
     opacity: 1,
     color: 'white',
     dashArray: '3',
-    fillOpacity: 0.7,
-    fillColor: getColor(feature.properties.density)
+    ...getStateColor(feature.properties.name)
+  };
+}
+
+function getStateColor(stateLongName) {
+  const stateAbbrev = nameToAbrev[stateLongName];
+  const stateRank = stateData[stateAbbrev];
+
+  const stateFirst = stateRank["top-3"][0];
+  const stateRatio = Object.values(stateFirst)[0]/stateRank["total"];
+  const stateColor = restColors[Object.keys(stateFirst)[0]];
+
+
+  return {
+    fillOpacity: (stateRatio-minRatio)/(maxRatio-minRatio),
+    fillColor: stateColor
   };
 }
 
