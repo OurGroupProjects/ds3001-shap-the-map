@@ -1,7 +1,86 @@
+let markersOn = false;
 let geojson;
-var map = L.map('map').setView([37.8, -96], 4);
-var info = L.control();
+let map;
+let stateData;
+const minRatio = 0.111111111111111111;
+const maxRatio = 0.37209302325581395;
+const info = L.control();
+const HeadersEnum = Object.freeze({"NAME":0, "CITY":1, "PROVINCE":2, "POSTALCODE":3, "LATITUDE":4, "LONGITUDE":5, "FULL_NAME":6});
+const restColors = {
+  "McDonald's": "#1f77b4",
+  "Arby's": "#ff7f0e",
+  "Burger King": "#2ca02c",
+  "Domino's Pizza": "#d62728",
+  "SONIC Drive In": "#9467bd",
+  "Taco John's": "#8c564b",
+  "Subway": "#e377c2",
+  "KFC": "#7f7f7f",
+  "Taco Bell": "#bcbd22",
+  "Wendy's": "#17becf"
+};
 
+const nameToAbrev =
+    {
+      'Alabama': 'AL',
+      'Alaska': 'AK',
+      'American Samoa': 'AS',
+      'Arizona': 'AZ',
+      'Arkansas': 'AR',
+      'California': 'CA',
+      'Colorado': 'CO',
+      'Connecticut': 'CT',
+      'Delaware': 'DE',
+      'District of Columbia': 'DC',
+      'Federated States Of Micronesia': 'FM',
+      'Florida': 'FL',
+      'Georgia': 'GA',
+      'Guam': 'GU',
+      'Hawaii': 'HI',
+      'Idaho': 'ID',
+      'Illinois': 'IL',
+      'Indiana': 'IN',
+      'Iowa': 'IA',
+      'Kansas': 'KS',
+      'Kentucky': 'KY',
+      'Louisiana': 'LA',
+      'Maine': 'ME',
+      'Marshall Islands': 'MH',
+      'Maryland': 'MD',
+      'Massachusetts': 'MA',
+      'Michigan': 'MI',
+      'Minnesota': 'MN',
+      'Mississippi': 'MS',
+      'Missouri': 'MO',
+      'Montana': 'MT',
+      'Nebraska': 'NE',
+      'Nevada': 'NV',
+      'New Hampshire': 'NH',
+      'New Jersey': 'NJ',
+      'New Mexico': 'NM',
+      'New York': 'NY',
+      'North Carolina': 'NC',
+      'North Dakota': 'ND',
+      'Northern Mariana Islands': 'MP',
+      'Ohio': 'OH',
+      'Oklahoma': 'OK',
+      'Oregon': 'OR',
+      'Palau': 'PW',
+      'Pennsylvania': 'PA',
+      'Puerto Rico': 'PR',
+      'Rhode Island': 'RI',
+      'South Carolina': 'SC',
+      'South Dakota': 'SD',
+      'Tennessee': 'TN',
+      'Texas': 'TX',
+      'Utah': 'UT',
+      'Vermont': 'VT',
+      'Virgin Islands': 'VI',
+      'Virginia': 'VA',
+      'Washington': 'WA',
+      'West Virginia': 'WV',
+      'Wisconsin': 'WI',
+      'Wyoming': 'WY'
+    };
 
 const makeRequest = function (url, method) {
   let request = new XMLHttpRequest();
@@ -13,7 +92,6 @@ const makeRequest = function (url, method) {
       } else {
         reject({
           status: request.status,
-          statusText: request.statusText
         });
       }
     };
@@ -23,12 +101,24 @@ const makeRequest = function (url, method) {
   })
 };
 
+// Load data files, then draw map
 Promise.all([makeRequest("/foodRankData", "GET"), makeRequest("/foodLocData", "GET")]).then(onDataLoad);
 
-function onDataLoad(e) {
-  const stateData = JSON.parse(e[0].responseText);
-  const foodLocData = e[1].responseText.split(/\r\n+/g).map(x => x.split(","));
 
+function onDataLoad(e) {
+  map = L.map('map').setView([37.8, -96], 4);
+  const geoJSONPane = map.createPane("geoPane");
+  const markerPane = map.createPane("markerPane");
+  stateData = JSON.parse(e[0].responseText);
+  const rawData = e[1].responseText.replace("\r", "");
+  const foodLocData = rawData.split(/\n+/g).slice(1).map(x => x.split(","));
+  // switch canvas to svg for diesired outcome (SUUUPER LAGGY tho), have to change pointer-event css to visiblePainted
+  const markerRenderer = L.canvas({padding:0.5, pane:"markerPane"});
+
+  // put map behind points
+  geoJSONPane.style.zIndex = 350;
+
+  // Draw states
   L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoidGd3aWxlcyIsImEiOiJjanV2bzhvdTEwM3NnNGRwYmIzd3Ixd3h5In0.jFIY4jpuTwWO4F_Pvbz31w', {
     maxZoom: 18,
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
@@ -37,65 +127,47 @@ function onDataLoad(e) {
     id: 'mapbox.light'
   }).addTo(map);
 
-
-// control that shows state info on hover
-
+  // Set up on hover
   info.onAdd = function (map) {
     this._div = L.DomUtil.create('div', 'info');
     this.update();
     return this._div;
   };
-
   info.update = function (props) {
     this._div.innerHTML = '<h4>US Population Density</h4>' + (props ?
         '<b>' + props.name + '</b><br />' + props.density + ' people / mi<sup>2</sup>'
         : 'Hover over a state');
   };
-
   info.addTo(map);
-
-  document.body.onkeyup = function (e) {
-    if (e.key === " ") {
-      map.setView([37.8, -96], 4);
-    }
-  }
 
   geojson = L.geoJson(statesData, {
     style: style,
-    onEachFeature: onEachFeature
+    onEachFeature: onEachFeature,
+    pane: "geoPane"
   }).addTo(map);
   map.attributionControl.addAttribution('Population data &copy; <a href="http://census.gov/">US Census Bureau</a>');
 
-  var legend = L.control({position: 'bottomleft'});
-
-  legend.onAdd = function (map) {
-    var div = L.DomUtil.create('div', 'info legend'),
-        grades = [0, 10, 20, 50, 100, 200, 500, 1000],
-        labels = [],
-        from, to;
-    for (var i = 0; i < grades.length; i++) {
-      from = grades[i];
-      to = grades[i + 1];
-      labels.push(
-          '<i style="background:' + getColor(from + 1) + '"></i> ' +
-          from + (to ? '&ndash;' + to : '+'));
+  // Setup Markers
+  let foodCircles = [];
+  for (let store of foodLocData) {
+    let markerColor = "#00000080";
+    if(!store[HeadersEnum.LATITUDE] || !store[HeadersEnum.LONGITUDE]){
+      console.log("PANIC");
     }
-    div.innerHTML = labels.join('<br>');
-    return div;
-  };
-  legend.addTo(map);
-}
+    if(store[HeadersEnum.NAME] in restColors) {
+      markerColor = restColors[store[HeadersEnum.NAME]];
+    }
+    const foodCircle = L.circleMarker([store[HeadersEnum.LATITUDE], store[HeadersEnum.LONGITUDE]],
+        {
+          renderer: markerRenderer,
+          color: markerColor
+        });
+    foodCircle.setRadius(.25);
+    foodCircles.push(foodCircle);
+    foodCircle.addTo(map).bindPopup("<b>" + store[HeadersEnum.FULL_NAME] + "</b></br>" + store[HeadersEnum.CITY] + ", " + store[HeadersEnum.PROVINCE])
+  }
 
-// get color depending on population density value
-function getColor(d) {
-  return d > 1000 ? '#0c2c84' :
-      d > 500 ? '#225ea8' :
-          d > 200 ? '#1d91c0' :
-              d > 100 ? '#41b6c4' :
-                  d > 50 ? '#7fcdbb' :
-                      d > 20 ? '#c7e9b4' :
-                          d > 10 ? '#edf8b1' :
-                              '#ffffd9';
+  initListeners(foodCircles);
 }
 
 function style(feature) {
@@ -104,8 +176,22 @@ function style(feature) {
     opacity: 1,
     color: 'white',
     dashArray: '3',
-    fillOpacity: 0.7,
-    fillColor: getColor(feature.properties.density)
+    ...getStateColor(feature.properties.name)
+  };
+}
+
+function getStateColor(stateLongName) {
+  const stateAbbrev = nameToAbrev[stateLongName];
+  const stateRank = stateData[stateAbbrev];
+
+  const stateFirst = stateRank["top-3"][0];
+  const stateRatio = Object.values(stateFirst)[0]/stateRank["total"];
+  const stateColor = restColors[Object.keys(stateFirst)[0]];
+
+
+  return {
+    fillOpacity: (stateRatio-minRatio)/(maxRatio-minRatio),
+    fillColor: stateColor
   };
 }
 
@@ -142,3 +228,36 @@ function onEachFeature(feature, layer) {
     click: zoomToFeature
   });
 }
+
+initListeners = (foodCircles) => {
+  document.body.onkeydown = (e) => {
+    if (e.key === "d") {
+      for (let i = 0; i < foodCircles.length; i++) {
+        foodCircles[i].setRadius(7);
+      }
+      document.styleSheets[1].cssRules[2].style.pointerEvents="auto";
+    } else if (e.key === "p") {
+      if (markersOn === false) {
+        document.styleSheets[1].cssRules[3].style.display = "block";
+      } else {
+        document.styleSheets[1].cssRules[3].style.display = "none";
+      }
+      markersOn = !markersOn;
+    }
+
+  };
+
+  document.body.onkeyup = function (e) {
+    if (e.key === " ") {
+      map.setView([37.8, -96], 4);
+    } else if (e.key === "d") {
+      for (let i = 0; i < foodCircles.length; i++) {
+        foodCircles[i].setRadius(.25);
+      }
+      document.styleSheets[1].cssRules[2].style.pointerEvents="none";
+    }
+
+  };
+};
+
+

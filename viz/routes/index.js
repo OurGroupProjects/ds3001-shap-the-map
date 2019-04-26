@@ -14,19 +14,18 @@ router.get('/foodRankData', function(req, res, next) {
 });
 
 router.get('/foodLocData', function (req, res, next) {
-  parseCsv().then((data) => {
+  loadCsv().then((data) => {
     res.send(data)
   });
 });
 
-parseCsv = () => {
+loadCsv = () => {
   return new Promise((resolve, reject) => {
-    fs.readFile('data/kaggle_fast-food.csv', (err, data) => {
+    fs.readFile('data/fast-food_filtered_v1.csv', (err, data) => {
       if (err) {
         reject(err);
       }
       resolve(data.toString())
-
     })
   })
 };
