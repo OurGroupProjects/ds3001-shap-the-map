@@ -117,6 +117,7 @@ function onDataLoad(e) {
 
   // put map behind points
   geoJSONPane.style.zIndex = 350;
+  markerPane.style.zIndex = 400;
 
   // Draw states
   L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoidGd3aWxlcyIsImEiOiJjanV2bzhvdTEwM3NnNGRwYmIzd3Ixd3h5In0.jFIY4jpuTwWO4F_Pvbz31w', {
@@ -235,7 +236,7 @@ initListeners = (foodCircles) => {
       for (let i = 0; i < foodCircles.length; i++) {
         foodCircles[i].setRadius(7);
       }
-      document.styleSheets[1].cssRules[2].style.pointerEvents="auto";
+      document.styleSheets[1].cssRules[1].style.pointerEvents="auto";
     } else if (e.key === "p") {
       if (markersOn === false) {
         document.styleSheets[1].cssRules[3].style.display = "block";
@@ -254,7 +255,7 @@ initListeners = (foodCircles) => {
       for (let i = 0; i < foodCircles.length; i++) {
         foodCircles[i].setRadius(.25);
       }
-      document.styleSheets[1].cssRules[2].style.pointerEvents="none";
+      document.styleSheets[1].cssRules[1].style.pointerEvents="none";
     }
 
   };
