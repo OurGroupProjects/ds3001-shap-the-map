@@ -141,8 +141,9 @@ function onDataLoad(e) {
   function getTopChains(stateLongName, index) {
       const stateAbbrev = nameToAbrev[stateLongName];
       const stateRank = stateData[stateAbbrev];
+      const chainInfo = stateRank["top-n"][index];
 
-      return Object.keys(stateRank["top-n"][index]);
+      return `${Object.keys(chainInfo)} (${Object.values(chainInfo)})`;
   }
 
   info.update = function (props) {
@@ -150,7 +151,8 @@ function onDataLoad(e) {
     this._div.innerHTML = '<h4>Top Food Chains</h4>' + (props ?
         '<b>' + Object.values(props)[0] + '</b><br />' + '</b><br />' + '1. ' + getTopChains(Object.values(props)[0], 0)+ '</b><br />' +
                                                                         '2. ' + getTopChains(Object.values(props)[0], 1)+ '</b><br />' +
-                                                                        '3. ' + getTopChains(Object.values(props)[0], 2)+ '</b><br />'
+                                                                        '3. ' + getTopChains(Object.values(props)[0], 2)+ '</b><br />' +
+                                                                        '<b>Total</b>: ' + stateData[nameToAbrev[Object.values(props)[0]]]['total']+ '</b><br />'
         : 'Hover over a state');
   };
   info.addTo(map);
