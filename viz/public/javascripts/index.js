@@ -115,7 +115,7 @@ function onDataLoad(e) {
   // switch canvas to svg for diesired outcome (SUUUPER LAGGY tho), have to change pointer-event css to visiblePainted
   const markerRenderer = L.canvas({padding:0.5, pane:"markerPane"});
 
-
+  // put map behind points
   geoJSONPane.style.zIndex = 350;
 
   // Draw states
