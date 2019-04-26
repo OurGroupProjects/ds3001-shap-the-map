@@ -10,8 +10,6 @@ out_version = '_v1'
 # File to write to
 output_file = 'counts-by-state'+ out_version +'.json'
 
-count_n = 3
-
 raw_data = pd.read_csv(input_file)
 
 counts_by_state = raw_data.groupby('province')['name'].value_counts()
@@ -21,8 +19,8 @@ states = counts_by_state.index.get_level_values('province').unique().tolist()
 
 state_count_dict = {}
 for state in states:
-    topn = list(counts_by_state[state][:count_n].items())
-    top_str = 'top-'+str(count_n)
+    topn = list(counts_by_state[state].items())
+    top_str = 'top-n'
     state_count_dict[state] = {
         top_str: [],
         'total': int(totals_by_state[state])

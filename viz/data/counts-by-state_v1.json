@@ -1,6 +1,6 @@
 {
   "AK": {
-    "top-3": [
+    "top-n": [
       {
         "Arby's": 3
       },
@@ -9,12 +9,30 @@
       },
       {
         "McDonald's": 2
+      },
+      {
+        "Pizza Hut": 2
+      },
+      {
+        "Carl's Jr": 1
+      },
+      {
+        "McDonalds": 1
+      },
+      {
+        "Regal Cinemas Tikahtnu  16 IMAX & RPX": 1
+      },
+      {
+        "Subway": 1
+      },
+      {
+        "Wendy's": 1
       }
     ],
     "total": 14
   },
   "AL": {
-    "top-3": [
+    "top-n": [
       {
         "McDonald's": 34
       },
@@ -23,12 +41,114 @@
       },
       {
         "Burger King": 30
+      },
+      {
+        "Arby's": 25
+      },
+      {
+        "Wendy's": 13
+      },
+      {
+        "Chick-fil-A": 10
+      },
+      {
+        "SONIC Drive In": 10
+      },
+      {
+        "Bojangles' Famous Chicken 'n Biscuits": 9
+      },
+      {
+        "Hardee's": 9
+      },
+      {
+        "Krystal": 9
+      },
+      {
+        "KFC": 8
+      },
+      {
+        "Sonic Drive-In": 5
+      },
+      {
+        "Captain D's": 4
+      },
+      {
+        "McDonalds": 3
+      },
+      {
+        "Mcdonald's": 3
+      },
+      {
+        "Pizza Hut": 3
+      },
+      {
+        "Subway": 3
+      },
+      {
+        "Waffle House": 3
+      },
+      {
+        "Checkers": 2
+      },
+      {
+        "Chick-Fil-A": 2
+      },
+      {
+        "Mc Donald's": 2
+      },
+      {
+        "Popeye's Chicken & Biscuits": 2
+      },
+      {
+        "Whataburger": 2
+      },
+      {
+        "Bravo Tacos": 1
+      },
+      {
+        "Chick-fil-a": 1
+      },
+      {
+        "Church's Chicken": 1
+      },
+      {
+        "Dominos Pizza": 1
+      },
+      {
+        "Five Guys": 1
+      },
+      {
+        "Hardee's / Red Burrito": 1
+      },
+      {
+        "Jack's": 1
+      },
+      {
+        "Jimmy John's": 1
+      },
+      {
+        "Kfc": 1
+      },
+      {
+        "Milo's Hamburgers": 1
+      },
+      {
+        "Popeye's Chicken": 1
+      },
+      {
+        "Quiznos": 1
+      },
+      {
+        "SUBWAY": 1
+      },
+      {
+        "Steak-out": 1
       }
     ],
     "total": 236
   },
   "AR": {
-    "top-3": [
+    "top-n": [
       {
         "McDonald's": 25
       },
@@ -37,12 +157,111 @@
       },
       {
         "Taco Bell": 14
+      },
+      {
+        "Wendy's": 11
+      },
+      {
+        "Arby's": 10
+      },
+      {
+        "KFC": 8
+      },
+      {
+        "Sonic Drive-In": 8
+      },
+      {
+        "Burger King": 5
+      },
+      {
+        "Domino's Pizza": 5
+      },
+      {
+        "Subway": 5
+      },
+      {
+        "Hardee's": 4
+      },
+      {
+        "Pizza Hut": 4
+      },
+      {
+        "Rally's": 3
+      },
+      {
+        "SUBWAY": 3
+      },
+      {
+        "Jimmy John's": 2
+      },
+      {
+        "Mcdonald's": 2
+      },
+      {
+        "Popeye's Chicken & Biscuits": 2
+      },
+      {
+        "Popeyes Louisiana Kitchen": 2
+      },
+      {
+        "Sonic Drive In": 2
+      },
+      {
+        "Whataburger": 2
+      },
+      {
+        "Backyard Burgers": 1
+      },
+      {
+        "Captain D's": 1
+      },
+      {
+        "Chick-fil-A": 1
+      },
+      {
+        "Chicken Express": 1
+      },
+      {
+        "Church's Chicken": 1
+      },
+      {
+        "Cody's Cafe": 1
+      },
+      {
+        "Five Guys": 1
+      },
+      {
+        "Jason's Deli": 1
+      },
+      {
+        "Long John Silver's": 1
+      },
+      {
+        "McDonalds": 1
+      },
+      {
+        "Pei Wei": 1
+      },
+      {
+        "Quiznos": 1
+      },
+      {
+        "Sonic": 1
+      },
+      {
+        "Steak 'n Shake": 1
+      },
+      {
+        "Steak Escape": 1
+      },
+      {
+        "Subway (johnson) @ Jonesboro": 1
       }
     ],
     "total": 151
   },
   "AZ": {
-    "top-3": [
+    "top-n": [
       {
         "McDonald's": 32
       },
@@ -51,12 +270,162 @@
       },
       {
         "Taco Bell": 16
+      },
+      {
+        "Domino's Pizza": 15
+      },
+      {
+        "Jack in the Box": 12
+      },
+      {
+        "Wendy's": 12
+      },
+      {
+        "KFC": 8
+      },
+      {
+        "Arby's": 7
+      },
+      {
+        "Panda Express": 7
+      },
+      {
+        "Subway": 7
+      },
+      {
+        "Pizza Hut": 6
+      },
+      {
+        "SONIC Drive In": 4
+      },
+      {
+        "Carl's Jr.": 3
+      },
+      {
+        "Chick-fil-A": 3
+      },
+      {
+        "Chipotle Mexican Grill": 3
+      },
+      {
+        "Church's Chicken": 3
+      },
+      {
+        "In-N-Out Burger": 3
+      },
+      {
+        "SUBWAY": 3
+      },
+      {
+        "Sonic Drive-In": 3
+      },
+      {
+        "Baskin-Robbins": 2
+      },
+      {
+        "Carl's Jr": 2
+      },
+      {
+        "Culver's": 2
+      },
+      {
+        "Del Taco": 2
+      },
+      {
+        "El Pollo Loco": 2
+      },
+      {
+        "Five Guys": 2
+      },
+      {
+        "Jimmy John's": 2
+      },
+      {
+        "Kfc": 2
+      },
+      {
+        "Mcdonald's": 2
+      },
+      {
+        "Quiznos": 2
+      },
+      {
+        "Wienerschnitzel": 2
+      },
+      {
+        "A&W Restaurant": 1
+      },
+      {
+        "Blimpie": 1
+      },
+      {
+        "Blimpie Subs & Sandwiches": 1
+      },
+      {
+        "Chick-fil-a Superstition Springs Center": 1
+      },
+      {
+        "Dairy Queen": 1
+      },
+      {
+        "Einstein Bros Bagels": 1
+      },
+      {
+        "Goodcents Deli Fresh Subs": 1
+      },
+      {
+        "Jack In The Box": 1
+      },
+      {
+        "Kentucky Fried Chicken": 1
+      },
+      {
+        "Maria's Fry Bread & Mexican Food": 1
+      },
+      {
+        "Papa John's": 1
+      },
+      {
+        "Papa John's Pizza": 1
+      },
+      {
+        "Papa Johns Pizza": 1
+      },
+      {
+        "Pick Up Stix": 1
+      },
+      {
+        "Pizza Hut Wingstreet": 1
+      },
+      {
+        "Popeyes Chicken and Biscuits": 1
+      },
+      {
+        "Raising Cane's Chicken Fingers": 1
+      },
+      {
+        "Samurai Sam's": 1
+      },
+      {
+        "Schlotzsky's": 1
+      },
+      {
+        "Snack Shack": 1
+      },
+      {
+        "Sonic Drive In": 1
+      },
+      {
+        "Whataburger": 1
+      },
+      {
+        "Wingstreet": 1
       }
     ],
     "total": 208
   },
   "CA": {
-    "top-3": [
+    "top-n": [
       {
         "McDonald's": 121
       },
@@ -65,12 +434,276 @@
       },
       {
         "Jack in the Box": 65
+      },
+      {
+        "Burger King": 58
+      },
+      {
+        "Carl's Jr.": 42
+      },
+      {
+        "Subway": 28
+      },
+      {
+        "Del Taco": 27
+      },
+      {
+        "El Pollo Loco": 27
+      },
+      {
+        "Wendy's": 26
+      },
+      {
+        "KFC": 24
+      },
+      {
+        "Pizza Hut": 19
+      },
+      {
+        "Domino's Pizza": 16
+      },
+      {
+        "Wienerschnitzel": 10
+      },
+      {
+        "In-N-Out Burger": 9
+      },
+      {
+        "Panda Express": 9
+      },
+      {
+        "Carl's Jr. / Green Burrito": 7
+      },
+      {
+        "SUBWAY": 7
+      },
+      {
+        "Baja Fresh": 6
+      },
+      {
+        "McDonalds": 6
+      },
+      {
+        "Mcdonald's": 5
+      },
+      {
+        "Popeyes Louisiana Kitchen": 5
+      },
+      {
+        "Carl's Jr": 4
+      },
+      {
+        "Five Guys": 4
+      },
+      {
+        "Round Table Pizza": 4
+      },
+      {
+        "Arby's": 3
+      },
+      {
+        "Baker's Drive Thru": 3
+      },
+      {
+        "Baja Fresh Mexican Grill": 2
+      },
+      {
+        "Boston Market": 2
+      },
+      {
+        "Carl's Jr / Green Burrito": 2
+      },
+      {
+        "Farmer Boys": 2
+      },
+      {
+        "Quiznos": 2
+      },
+      {
+        "The Flame Broiler": 2
+      },
+      {
+        "Bamboo Bistro": 1
+      },
+      {
+        "Carl's / Green Burrito": 1
+      },
+      {
+        "Carl's Jr - Green Burrito": 1
+      },
+      {
+        "Carls Jr": 1
+      },
+      {
+        "Carls Jr. / Green Burrito": 1
+      },
+      {
+        "Chick-Fil-A": 1
+      },
+      {
+        "Chick-fil-A": 1
+      },
+      {
+        "Chicken House": 1
+      },
+      {
+        "China King": 1
+      },
+      {
+        "Cinnabon": 1
+      },
+      {
+        "Costa Vida": 1
+      },
+      {
+        "Cypress Best": 1
+      },
+      {
+        "Dairy Queen": 1
+      },
+      {
+        "Dual - Carls / Grn Burrito 1100654": 1
+      },
+      {
+        "El Tarasco Mexican Food": 1
+      },
+      {
+        "Everest": 1
+      },
+      {
+        "Food 4 Less": 1
+      },
+      {
+        "Foster's Freeze": 1
+      },
+      {
+        "Fosters Freeze": 1
+      },
+      {
+        "Hegenburgers": 1
+      },
+      {
+        "Hot Dog On A Stick": 1
+      },
+      {
+        "Hot Dog on a Stick": 1
+      },
+      {
+        "Islands Restaurant": 1
+      },
+      {
+        "Jacks Grocery": 1
+      },
+      {
+        "Jimmy John's": 1
+      },
+      {
+        "Jollibee": 1
+      },
+      {
+        "Kim Lee Fast Food": 1
+      },
+      {
+        "L&L Hawaiian Barbecue": 1
+      },
+      {
+        "Lanesplitter Pizza & Pub": 1
+      },
+      {
+        "Little Caesars Pizza": 1
+      },
+      {
+        "Ll Hawaiian Barbecue": 1
+      },
+      {
+        "LocoL": 1
+      },
+      {
+        "Mc Donalds": 1
+      },
+      {
+        "Mcdonald's #25557": 1
+      },
+      {
+        "Nick's Burgers": 1
+      },
+      {
+        "Omega Drive-In": 1
+      },
+      {
+        "Papa Johns Pizza": 1
+      },
+      {
+        "Peking Wok": 1
+      },
+      {
+        "Pete's Burgers": 1
+      },
+      {
+        "Pizza Factory": 1
+      },
+      {
+        "Pollo Campero": 1
+      },
+      {
+        "Popeyes Chicken & Biscuits": 1
+      },
+      {
+        "Quiznos Sub": 1
+      },
+      {
+        "Rally's": 1
+      },
+      {
+        "Rally's Hamburgers": 1
+      },
+      {
+        "Rubio's": 1
+      },
+      {
+        "Rubio's Coastal Grill": 1
+      },
+      {
+        "SONIC Drive In": 1
+      },
+      {
+        "SONIC Drive-In": 1
+      },
+      {
+        "SUBWAY\u00ae": 1
+      },
+      {
+        "Smashburger": 1
+      },
+      {
+        "Sonic Drive-in (trailer)": 1
+      },
+      {
+        "Subway Guitars": 1
+      },
+      {
+        "Subway Sandwiches": 1
+      },
+      {
+        "Subway Sandwiches and Salads": 1
+      },
+      {
+        "The Great Steak & Potato Co.": 1
+      },
+      {
+        "The Halal Guys": 1
+      },
+      {
+        "World Wrapps": 1
+      },
+      {
+        "Yoshinoya": 1
       }
     ],
     "total": 676
   },
   "CO": {
-    "top-3": [
+    "top-n": [
       {
         "Burger King": 24
       },
@@ -79,12 +712,120 @@
       },
       {
         "Taco Bell": 14
+      },
+      {
+        "SONIC Drive In": 12
+      },
+      {
+        "Subway": 11
+      },
+      {
+        "Wendy's": 8
+      },
+      {
+        "Pizza Hut": 7
+      },
+      {
+        "Domino's Pizza": 6
+      },
+      {
+        "SUBWAY": 5
+      },
+      {
+        "Arby's": 3
+      },
+      {
+        "Five Guys": 3
+      },
+      {
+        "Good Times Burgers & Frozen Custard": 3
+      },
+      {
+        "Jimmy John's": 3
+      },
+      {
+        "KFC": 3
+      },
+      {
+        "Little Caesars Pizza": 3
+      },
+      {
+        "Mcdonald's": 3
+      },
+      {
+        "Quiznos": 3
+      },
+      {
+        "Baskin-Robbins": 2
+      },
+      {
+        "Carl's Jr.": 2
+      },
+      {
+        "Dairy Queen": 2
+      },
+      {
+        "Kfc": 2
+      },
+      {
+        "McDonalds": 2
+      },
+      {
+        "Sonic Drive-In": 2
+      },
+      {
+        "Arbys": 1
+      },
+      {
+        "Blimpie": 1
+      },
+      {
+        "Chick-Fil-A": 1
+      },
+      {
+        "Culver's": 1
+      },
+      {
+        "Dominos Pizza": 1
+      },
+      {
+        "Fazoli's": 1
+      },
+      {
+        "Freddy's Steakburger": 1
+      },
+      {
+        "KFC / Taco Bell": 1
+      },
+      {
+        "Mc Donald's": 1
+      },
+      {
+        "Papa John's Pizza": 1
+      },
+      {
+        "Papa Johns Pizza": 1
+      },
+      {
+        "Qdoba Mexican Grill": 1
+      },
+      {
+        "SONIC Drive-In": 1
+      },
+      {
+        "Strongwater Spirits & Botanicals": 1
+      },
+      {
+        "Tellers Tap Room & Kitchen": 1
+      },
+      {
+        "Waffle House": 1
       }
     ],
     "total": 158
   },
   "CT": {
-    "top-3": [
+    "top-n": [
       {
         "McDonald's": 33
       },
@@ -93,12 +834,81 @@
       },
       {
         "Wendy's": 9
+      },
+      {
+        "Taco Bell": 8
+      },
+      {
+        "Arby's": 3
+      },
+      {
+        "Boston Market": 3
+      },
+      {
+        "Five Guys": 3
+      },
+      {
+        "KFC": 3
+      },
+      {
+        "McDonalds": 3
+      },
+      {
+        "Popeyes Louisiana Kitchen": 2
+      },
+      {
+        "SUBWAY": 2
+      },
+      {
+        "Dairy Queen": 1
+      },
+      {
+        "Dunkin Donuts": 1
+      },
+      {
+        "Garden Catering": 1
+      },
+      {
+        "Geno's Fast Break": 1
+      },
+      {
+        "Home Town Buffet": 1
+      },
+      {
+        "MOOYAH Burgers, Fries & Shakes": 1
+      },
+      {
+        "Mcdonald's": 1
+      },
+      {
+        "Mcdonalds": 1
+      },
+      {
+        "Panda Express": 1
+      },
+      {
+        "Panera Bread": 1
+      },
+      {
+        "Roly Poly": 1
+      },
+      {
+        "SONIC Drive In": 1
+      },
+      {
+        "Sarku Japan": 1
+      },
+      {
+        "Sonic": 1
+      },
+      {
+        "Subway": 1
       }
     ],
     "total": 96
   },
   "Co Spgs": {
-    "top-3": [
+    "top-n": [
       {
         "Arby's": 1
       },
@@ -107,12 +917,18 @@
       },
       {
         "Mcdonalds": 1
+      },
+      {
+        "Sonic Drive In": 1
+      },
+      {
+        "Taco Bell": 1
       }
     ],
     "total": 5
   },
   "DC": {
-    "top-3": [
+    "top-n": [
       {
         "McDonald's": 4
       },
@@ -121,12 +937,48 @@
       },
       {
         "Wendy's": 2
+      },
+      {
+        "Au Bon Pain": 1
+      },
+      {
+        "Ben & Jerry's": 1
+      },
+      {
+        "Chipotle Mexican Grill": 1
+      },
+      {
+        "Domino's Pizza": 1
+      },
+      {
+        "KFC": 1
+      },
+      {
+        "Papa John's Pizza": 1
+      },
+      {
+        "Pizza Hut": 1
+      },
+      {
+        "Popeye's Chicken & Biscuits": 1
+      },
+      {
+        "QDOBA Mexican Eats": 1
+      },
+      {
+        "Sammy Carry-Out": 1
+      },
+      {
+        "Taco Bell": 1
+      },
+      {
+        "Wings N' More Wings": 1
       }
     ],
     "total": 21
   },
   "DE": {
-    "top-3": [
+    "top-n": [
       {
         "Domino's Pizza": 6
       },
@@ -135,12 +987,51 @@
       },
       {
         "Arby's": 4
+      },
+      {
+        "Burger King": 3
+      },
+      {
+        "Taco Bell": 2
+      },
+      {
+        "Boston Market": 1
+      },
+      {
+        "Capriotti's Sandwich Shop": 1
+      },
+      {
+        "Crystal Restaurant": 1
+      },
+      {
+        "Five Guys": 1
+      },
+      {
+        "Hardee's": 1
+      },
+      {
+        "KFC": 1
+      },
+      {
+        "Pizza Hut": 1
+      },
+      {
+        "Saladworks": 1
+      },
+      {
+        "Subway": 1
+      },
+      {
+        "Thrasher's French Fries": 1
+      },
+      {
+        "Thrashers French Fries": 1
       }
     ],
     "total": 32
   },
   "FL": {
-    "top-3": [
+    "top-n": [
       {
         "Burger King": 92
       },
@@ -149,12 +1040,207 @@
       },
       {
         "KFC": 36
+      },
+      {
+        "Wendy's": 35
+      },
+      {
+        "Taco Bell": 24
+      },
+      {
+        "Domino's Pizza": 21
+      },
+      {
+        "Subway": 12
+      },
+      {
+        "Krystal": 11
+      },
+      {
+        "Pizza Hut": 11
+      },
+      {
+        "Checkers": 10
+      },
+      {
+        "Jimmy John's": 8
+      },
+      {
+        "McDonalds": 8
+      },
+      {
+        "Arby's": 7
+      },
+      {
+        "Hardee's / Red Burrito": 7
+      },
+      {
+        "SUBWAY": 7
+      },
+      {
+        "Five Guys": 6
+      },
+      {
+        "Pollo Tropical": 6
+      },
+      {
+        "SONIC Drive In": 6
+      },
+      {
+        "Boston Market": 5
+      },
+      {
+        "Chick-fil-A": 5
+      },
+      {
+        "Waffle House": 5
+      },
+      {
+        "Mcdonald's": 4
+      },
+      {
+        "Whataburger": 4
+      },
+      {
+        "Culver's": 3
+      },
+      {
+        "Bojangles' Famous Chicken 'n Biscuits": 2
+      },
+      {
+        "Chick-Fil-A": 2
+      },
+      {
+        "Chick-fil-a": 2
+      },
+      {
+        "Church's Chicken": 2
+      },
+      {
+        "Dunkin Donuts": 2
+      },
+      {
+        "Dunkin' Donuts": 2
+      },
+      {
+        "Firehouse Subs": 2
+      },
+      {
+        "Hardee's": 2
+      },
+      {
+        "Little Caesars Pizza": 2
+      },
+      {
+        "Mcdonalds": 2
+      },
+      {
+        "Panda Express": 2
+      },
+      {
+        "Popeyes Chicken & Biscuits": 2
+      },
+      {
+        "Rally's": 2
+      },
+      {
+        "A&W": 1
+      },
+      {
+        "A&W All-American Foods": 1
+      },
+      {
+        "Blimpie": 1
+      },
+      {
+        "Bob Evans Restaurant": 1
+      },
+      {
+        "Buds Chicken & Seafood": 1
+      },
+      {
+        "Capt Crab's Take-Away": 1
+      },
+      {
+        "Captain D's": 1
+      },
+      {
+        "Charleys Philly Steaks": 1
+      },
+      {
+        "Checker's": 1
+      },
+      {
+        "Chick-fil-a Orange Avenue": 1
+      },
+      {
+        "China King Restaurant": 1
+      },
+      {
+        "Flip Burger Bar": 1
+      },
+      {
+        "Jim's Coney Island": 1
+      },
+      {
+        "Jimmy Johns": 1
+      },
+      {
+        "Los Verdes": 1
+      },
+      {
+        "Luna Corner Pizza": 1
+      },
+      {
+        "Moe's Original Bar B Que": 1
+      },
+      {
+        "Moe's Southwest Grill": 1
+      },
+      {
+        "Papa John's Pizza": 1
+      },
+      {
+        "Papa Johns": 1
+      },
+      {
+        "Pei Wei": 1
+      },
+      {
+        "Popeyes": 1
+      },
+      {
+        "Popeyes Chicken and Biscuits": 1
+      },
+      {
+        "Sarku Japan": 1
+      },
+      {
+        "Shloma Inc": 1
+      },
+      {
+        "Sonic": 1
+      },
+      {
+        "South-A-Philly Steaks and Hoagies": 1
+      },
+      {
+        "Steak 'N Shake": 1
+      },
+      {
+        "Steak 'n Shake": 1
+      },
+      {
+        "Wendys": 1
+      },
+      {
+        "Wingstreet": 1
       }
     ],
     "total": 471
   },
   "GA": {
-    "top-3": [
+    "top-n": [
       {
         "McDonald's": 52
       },
@@ -163,12 +1249,150 @@
       },
       {
         "Wendy's": 32
+      },
+      {
+        "Taco Bell": 26
+      },
+      {
+        "Krystal": 20
+      },
+      {
+        "Bojangles' Famous Chicken 'n Biscuits": 16
+      },
+      {
+        "Arby's": 15
+      },
+      {
+        "Domino's Pizza": 12
+      },
+      {
+        "KFC": 12
+      },
+      {
+        "Subway": 12
+      },
+      {
+        "Checkers": 11
+      },
+      {
+        "Hardee's": 11
+      },
+      {
+        "Waffle House": 11
+      },
+      {
+        "Chick-fil-A": 10
+      },
+      {
+        "SONIC Drive In": 8
+      },
+      {
+        "Captain D's": 5
+      },
+      {
+        "Five Guys": 4
+      },
+      {
+        "Mcdonald's": 4
+      },
+      {
+        "Dairy Queen": 3
+      },
+      {
+        "Jimmy John's": 3
+      },
+      {
+        "Mcdonalds": 3
+      },
+      {
+        "Pizza Hut": 3
+      },
+      {
+        "Chick-Fil-A": 2
+      },
+      {
+        "Chick-fil-a": 2
+      },
+      {
+        "Church's Chicken": 2
+      },
+      {
+        "McDonalds": 2
+      },
+      {
+        "Sonic Drive-In": 2
+      },
+      {
+        "Auntie Anne's": 1
+      },
+      {
+        "Blimpie": 1
+      },
+      {
+        "Captain D's Seafood": 1
+      },
+      {
+        "Chick-fil-a Truett's Luau": 1
+      },
+      {
+        "Culver's": 1
+      },
+      {
+        "Dominos Pizza": 1
+      },
+      {
+        "Flash Foods / McDonald's": 1
+      },
+      {
+        "Jim Bob's Chicken Fingers": 1
+      },
+      {
+        "KFC/Taco Bell": 1
+      },
+      {
+        "Kentucky Fried Chicken": 1
+      },
+      {
+        "Little Caesars Pizza": 1
+      },
+      {
+        "Long John Silvers": 1
+      },
+      {
+        "McDonalds @ Old Atlanta": 1
+      },
+      {
+        "McDonald\u2019s": 1
+      },
+      {
+        "Papa John's Pizza": 1
+      },
+      {
+        "Pita Pit": 1
+      },
+      {
+        "Pollo Tropical": 1
+      },
+      {
+        "Popeyes Louisiana Kitchen": 1
+      },
+      {
+        "Shoney's on the Go": 1
+      },
+      {
+        "Subway - Bell's Ferry": 1
+      },
+      {
+        "Wings And Philly": 1
+      },
+      {
+        "Wingstop": 1
       }
     ],
     "total": 347
   },
   "HI": {
-    "top-3": [
+    "top-n": [
       {
         "Burger King": 5
       },
@@ -177,12 +1401,78 @@
       },
       {
         "Jack in the Box": 4
+      },
+      {
+        "Domino's Pizza": 2
+      },
+      {
+        "Dominos Pizza": 2
+      },
+      {
+        "Pizza Hut": 2
+      },
+      {
+        "Taco Bell": 2
+      },
+      {
+        "7-11": 1
+      },
+      {
+        "Arby's": 1
+      },
+      {
+        "Baskin-Robbins": 1
+      },
+      {
+        "Jersey Mike's Subs": 1
+      },
+      {
+        "Kfc": 1
+      },
+      {
+        "L&l Hawaiian Barbecue": 1
+      },
+      {
+        "Loco Moco Drive-Inn": 1
+      },
+      {
+        "Maui Tacos": 1
+      },
+      {
+        "McDonald's": 1
+      },
+      {
+        "McDonald's of Mililani Mauka": 1
+      },
+      {
+        "Panda Express": 1
+      },
+      {
+        "Papa John\u2019s Pizza": 1
+      },
+      {
+        "Round Table Pizza": 1
+      },
+      {
+        "Sunrise Cafe": 1
+      },
+      {
+        "Taco del Mar": 1
+      },
+      {
+        "Teddy's Bigger Burgers": 1
+      },
+      {
+        "Wendy's": 1
+      },
+      {
+        "Yellow Cab Pizza Co.": 1
       }
     ],
     "total": 40
   },
   "IA": {
-    "top-3": [
+    "top-n": [
       {
         "McDonald's": 37
       },
@@ -191,12 +1481,93 @@
       },
       {
         "Taco John's": 15
+      },
+      {
+        "Taco Bell": 12
+      },
+      {
+        "Arby's": 10
+      },
+      {
+        "Wendy's": 10
+      },
+      {
+        "Hardee's": 9
+      },
+      {
+        "KFC": 9
+      },
+      {
+        "Subway": 8
+      },
+      {
+        "Jimmy John's": 7
+      },
+      {
+        "Domino's Pizza": 5
+      },
+      {
+        "Culver's": 2
+      },
+      {
+        "Kum & Go": 2
+      },
+      {
+        "A&W": 1
+      },
+      {
+        "Aw Restaurant": 1
+      },
+      {
+        "Breadeaux Pizza": 1
+      },
+      {
+        "Chick-fil-A": 1
+      },
+      {
+        "Dairy Queen": 1
+      },
+      {
+        "Integrated Therapy Specialists: Arnold D Larson": 1
+      },
+      {
+        "Jamjam": 1
+      },
+      {
+        "Jimmy Johns": 1
+      },
+      {
+        "Kum Go": 1
+      },
+      {
+        "Panera Bread": 1
+      },
+      {
+        "Quiznos": 1
+      },
+      {
+        "Raising Cane's Chicken Fingers": 1
+      },
+      {
+        "SONIC Drive In": 1
+      },
+      {
+        "Shot Tower Inn": 1
+      },
+      {
+        "Sonic": 1
+      },
+      {
+        "Sonic Drive-In": 1
+      },
+      {
+        "Thunder Ridge Ampride": 1
       }
     ],
     "total": 166
   },
   "ID": {
-    "top-3": [
+    "top-n": [
       {
         "McDonald's": 14
       },
@@ -205,12 +1576,78 @@
       },
       {
         "Arby's": 8
+      },
+      {
+        "Burger King": 7
+      },
+      {
+        "Domino's Pizza": 7
+      },
+      {
+        "Jimmy John's": 7
+      },
+      {
+        "Wendy's": 7
+      },
+      {
+        "Pizza Hut": 6
+      },
+      {
+        "Jack in the Box": 5
+      },
+      {
+        "Jack In The Box": 4
+      },
+      {
+        "KFC": 4
+      },
+      {
+        "Arctic Circle": 3
+      },
+      {
+        "Carl's Jr.": 2
+      },
+      {
+        "Del Taco": 2
+      },
+      {
+        "SONIC Drive In": 2
+      },
+      {
+        "Sonic Drive-In": 2
+      },
+      {
+        "A&w": 1
+      },
+      {
+        "Cafe Rio": 1
+      },
+      {
+        "Dairy Queen": 1
+      },
+      {
+        "Five Guys": 1
+      },
+      {
+        "Popeyes Louisiana Kitchen": 1
+      },
+      {
+        "Port of Subs": 1
+      },
+      {
+        "Subway": 1
+      },
+      {
+        "Taco John's": 1
+      },
+      {
+        "Taco Time": 1
       }
     ],
     "total": 99
   },
   "IL": {
-    "top-3": [
+    "top-n": [
       {
         "McDonald's": 76
       },
@@ -219,12 +1656,222 @@
       },
       {
         "Taco Bell": 48
+      },
+      {
+        "Wendy's": 22
+      },
+      {
+        "Subway": 18
+      },
+      {
+        "KFC": 16
+      },
+      {
+        "Hardee's": 12
+      },
+      {
+        "Arby's": 8
+      },
+      {
+        "Domino's Pizza": 8
+      },
+      {
+        "Jimmy John's": 8
+      },
+      {
+        "Dairy Queen": 4
+      },
+      {
+        "Panda Express": 4
+      },
+      {
+        "White Castle": 4
+      },
+      {
+        "Checkers": 3
+      },
+      {
+        "Hardee's / Red Burrito": 3
+      },
+      {
+        "Long John Silver's": 3
+      },
+      {
+        "McDonalds": 3
+      },
+      {
+        "Boston Market": 2
+      },
+      {
+        "Captain D's": 2
+      },
+      {
+        "Culver's": 2
+      },
+      {
+        "Dunkin' Donuts": 2
+      },
+      {
+        "Five Guys": 2
+      },
+      {
+        "Jack in the Box": 2
+      },
+      {
+        "Mcdonald's": 2
+      },
+      {
+        "Quiznos": 2
+      },
+      {
+        "Rally's": 2
+      },
+      {
+        "Sonic Drive-In": 2
+      },
+      {
+        "Taco John's": 2
+      },
+      {
+        "A&W All-American Food": 1
+      },
+      {
+        "AJ's Hotdogs & Gyros": 1
+      },
+      {
+        "Alice's": 1
+      },
+      {
+        "BIG & little's Restaurant": 1
+      },
+      {
+        "Bills Place": 1
+      },
+      {
+        "Charcoal Delights": 1
+      },
+      {
+        "Charkies": 1
+      },
+      {
+        "Checker's Drive-in Restaurant": 1
+      },
+      {
+        "Chicago Union Station Food Court": 1
+      },
+      {
+        "Chick-fil-A": 1
+      },
+      {
+        "Chuck Wagon": 1
+      },
+      {
+        "Church's Chicken": 1
+      },
+      {
+        "Dawg House Grill": 1
+      },
+      {
+        "Fazoli's": 1
+      },
+      {
+        "Garden Fast Food": 1
+      },
+      {
+        "Great Steak & Potato Co": 1
+      },
+      {
+        "Gyros Kings": 1
+      },
+      {
+        "Hermosa": 1
+      },
+      {
+        "Hub City Express": 1
+      },
+      {
+        "Jack In The Box": 1
+      },
+      {
+        "Jersey Mike's Subs": 1
+      },
+      {
+        "Kam's Chop Suey": 1
+      },
+      {
+        "Kfc - Kentucky Fried Chicken": 1
+      },
+      {
+        "Lee's Oriental Martial Arts": 1
+      },
+      {
+        "Long John Silver's / A&W": 1
+      },
+      {
+        "Lukes on Harlem": 1
+      },
+      {
+        "Mc Donald's": 1
+      },
+      {
+        "Mcdonalds": 1
+      },
+      {
+        "Meatheads": 1
+      },
+      {
+        "Mickey's Gyros & Ribs": 1
+      },
+      {
+        "Nick's Gyros": 1
+      },
+      {
+        "Nino's Pizza": 1
+      },
+      {
+        "Original Tracks": 1
+      },
+      {
+        "Papagus Gyros": 1
+      },
+      {
+        "Pizza Hut": 1
+      },
+      {
+        "Popeye's Chicken & Biscuits": 1
+      },
+      {
+        "Popeyes Louisiana Kitchen": 1
+      },
+      {
+        "Portillo's": 1
+      },
+      {
+        "Rally's Springfield": 1
+      },
+      {
+        "Ryan's": 1
+      },
+      {
+        "SONIC Drive In": 1
+      },
+      {
+        "Steak 'n Shake": 1
+      },
+      {
+        "Tom & Jerry's": 1
+      },
+      {
+        "Tom's Grill": 1
+      },
+      {
+        "Topper's Pizza": 1
       }
     ],
     "total": 363
   },
   "IN": {
-    "top-3": [
+    "top-n": [
       {
         "McDonald's": 82
       },
@@ -233,12 +1880,144 @@
       },
       {
         "Arby's": 44
+      },
+      {
+        "Wendy's": 44
+      },
+      {
+        "Burger King": 43
+      },
+      {
+        "KFC": 24
+      },
+      {
+        "Hardee's": 11
+      },
+      {
+        "Jimmy John's": 10
+      },
+      {
+        "Domino's Pizza": 9
+      },
+      {
+        "Rally's": 5
+      },
+      {
+        "White Castle": 5
+      },
+      {
+        "Long John Silver's": 4
+      },
+      {
+        "Dairy Queen": 3
+      },
+      {
+        "Five Guys": 3
+      },
+      {
+        "Chick-Fil-A": 2
+      },
+      {
+        "Chick-fil-A": 2
+      },
+      {
+        "Mcdonald's": 2
+      },
+      {
+        "Penguin Point": 2
+      },
+      {
+        "Popeyes Louisiana Kitchen": 2
+      },
+      {
+        "SONIC Drive In": 2
+      },
+      {
+        "SUBWAY": 2
+      },
+      {
+        "Steak 'n Shake": 2
+      },
+      {
+        "Subway": 2
+      },
+      {
+        "Taco John's": 2
+      },
+      {
+        "A&W All-American Food": 1
+      },
+      {
+        "Ball State Lafollette Dining": 1
+      },
+      {
+        "Captain D's Seafood": 1
+      },
+      {
+        "Church's Chicken": 1
+      },
+      {
+        "Cousins Subs": 1
+      },
+      {
+        "George's Gyros Spot": 1
+      },
+      {
+        "Hardee's / Red Burrito": 1
+      },
+      {
+        "Jack in the Box": 1
+      },
+      {
+        "Jimmy Johns": 1
+      },
+      {
+        "Kentucky Fried Chicken": 1
+      },
+      {
+        "Long John Silvers": 1
+      },
+      {
+        "McDonalds": 1
+      },
+      {
+        "Omelette House": 1
+      },
+      {
+        "Panda": 1
+      },
+      {
+        "Penn Station East Coast Subs": 1
+      },
+      {
+        "Pizza Hut": 1
+      },
+      {
+        "Quizno's +": 1
+      },
+      {
+        "Rally's Hamburgers": 1
+      },
+      {
+        "Rallys": 1
+      },
+      {
+        "Sonic": 1
+      },
+      {
+        "Steak N Shake": 1
+      },
+      {
+        "Waffle House": 1
+      },
+      {
+        "Wu's Fine Chinese Cuisine": 1
       }
     ],
     "total": 379
   },
   "KS": {
-    "top-3": [
+    "top-n": [
       {
         "SONIC Drive In": 17
       },
@@ -247,12 +2026,93 @@
       },
       {
         "Subway": 12
+      },
+      {
+        "McDonald's": 10
+      },
+      {
+        "Arby's": 5
+      },
+      {
+        "KFC": 5
+      },
+      {
+        "Taco John's": 4
+      },
+      {
+        "Chick-fil-A": 3
+      },
+      {
+        "Pizza Hut": 3
+      },
+      {
+        "Taco Bell": 3
+      },
+      {
+        "Wendy's": 3
+      },
+      {
+        "Church's Chicken": 2
+      },
+      {
+        "Jimmy John's": 2
+      },
+      {
+        "Raising Cane's Chicken Fingers": 2
+      },
+      {
+        "Sonic Drive-In": 2
+      },
+      {
+        "Chick-Fil-A": 1
+      },
+      {
+        "Culver's": 1
+      },
+      {
+        "Dairy Queen": 1
+      },
+      {
+        "Domino's Pizza": 1
+      },
+      {
+        "Firehouse Subs": 1
+      },
+      {
+        "Kfc": 1
+      },
+      {
+        "McDonalds": 1
+      },
+      {
+        "Popeyes Louisiana Kitchen": 1
+      },
+      {
+        "Qdoba Mexican Eats": 1
+      },
+      {
+        "Runza": 1
+      },
+      {
+        "Sonic Drive In": 1
+      },
+      {
+        "Sonic Drive-in": 1
+      },
+      {
+        "Spangle's": 1
+      },
+      {
+        "Spangles": 1
+      },
+      {
+        "Vista Drive In": 1
       }
     ],
     "total": 103
   },
   "KY": {
-    "top-3": [
+    "top-n": [
       {
         "McDonald's": 71
       },
@@ -261,12 +2121,156 @@
       },
       {
         "Arby's": 33
+      },
+      {
+        "Taco Bell": 31
+      },
+      {
+        "Burger King": 21
+      },
+      {
+        "Dairy Queen": 13
+      },
+      {
+        "KFC": 11
+      },
+      {
+        "Hardee's": 10
+      },
+      {
+        "Subway": 9
+      },
+      {
+        "White Castle": 9
+      },
+      {
+        "Domino's Pizza": 8
+      },
+      {
+        "Gold Star Chili": 8
+      },
+      {
+        "SONIC Drive In": 8
+      },
+      {
+        "Jimmy John's": 6
+      },
+      {
+        "McDonalds": 5
+      },
+      {
+        "Long John Silver's": 3
+      },
+      {
+        "Qdoba Mexican Grill": 3
+      },
+      {
+        "Rally's": 3
+      },
+      {
+        "Waffle House": 3
+      },
+      {
+        "Captain D's": 2
+      },
+      {
+        "Chick-fil-A": 2
+      },
+      {
+        "Dairy Cheer": 2
+      },
+      {
+        "Long John Silvers": 2
+      },
+      {
+        "Panera Bread": 2
+      },
+      {
+        "Penn Station East Coast Subs": 2
+      },
+      {
+        "Pizza Hut": 2
+      },
+      {
+        "Quiznos": 2
+      },
+      {
+        "Skyline Chili": 2
+      },
+      {
+        "A&W Restaurant": 1
+      },
+      {
+        "Bob Evans": 1
+      },
+      {
+        "Bojangles' Famous Chicken 'n Biscuits": 1
+      },
+      {
+        "Captain D's Seafood": 1
+      },
+      {
+        "Chick-Fil-A": 1
+      },
+      {
+        "Culver's": 1
+      },
+      {
+        "DQ Grill & Chill": 1
+      },
+      {
+        "Dewey's Pizza": 1
+      },
+      {
+        "Fazoli's": 1
+      },
+      {
+        "Five Guys": 1
+      },
+      {
+        "Frisch's Big Boy": 1
+      },
+      {
+        "Kfc": 1
+      },
+      {
+        "Krystal": 1
+      },
+      {
+        "Lee's Famous Recipe Chicken": 1
+      },
+      {
+        "Mc Donald's": 1
+      },
+      {
+        "Panda Express": 1
+      },
+      {
+        "Raising Cane's": 1
+      },
+      {
+        "Ryan's": 1
+      },
+      {
+        "SUBWAY": 1
+      },
+      {
+        "Sonic Drive-In": 1
+      },
+      {
+        "Steak 'n Shake": 1
+      },
+      {
+        "Taco John's": 1
+      },
+      {
+        "Yum Brands Inc": 1
       }
     ],
     "total": 332
   },
   "LA": {
-    "top-3": [
+    "top-n": [
       {
         "McDonald's": 55
       },
@@ -275,12 +2279,126 @@
       },
       {
         "Taco Bell": 24
+      },
+      {
+        "Wendy's": 21
+      },
+      {
+        "Sonic Drive-In": 19
+      },
+      {
+        "Arby's": 10
+      },
+      {
+        "SONIC Drive In": 10
+      },
+      {
+        "Subway": 7
+      },
+      {
+        "Waffle House": 5
+      },
+      {
+        "Chick-Fil-A": 4
+      },
+      {
+        "Mcdonald's": 4
+      },
+      {
+        "Dairy Queen": 3
+      },
+      {
+        "Domino's Pizza": 3
+      },
+      {
+        "McDonalds": 3
+      },
+      {
+        "Popeye's Chicken & Biscuits": 3
+      },
+      {
+        "Raising Cane's Chicken Fingers": 3
+      },
+      {
+        "Rally's": 3
+      },
+      {
+        "Whataburger": 3
+      },
+      {
+        "Blimpie": 2
+      },
+      {
+        "Captain D's": 2
+      },
+      {
+        "Checkers": 2
+      },
+      {
+        "Chick-fil-A": 2
+      },
+      {
+        "KFC": 2
+      },
+      {
+        "Pizza Hut": 2
+      },
+      {
+        "Popeyes": 2
+      },
+      {
+        "Quiznos": 2
+      },
+      {
+        "Captain D's Seafood": 1
+      },
+      {
+        "Checker's Hamburgers": 1
+      },
+      {
+        "Church's Chicken": 1
+      },
+      {
+        "Dairy Queen Grill & Chill": 1
+      },
+      {
+        "Dominos Pizza": 1
+      },
+      {
+        "Five Guys": 1
+      },
+      {
+        "Hardee's": 1
+      },
+      {
+        "Isabella's Pizzeria": 1
+      },
+      {
+        "Kfc": 1
+      },
+      {
+        "Krystal": 1
+      },
+      {
+        "Popeye's": 1
+      },
+      {
+        "Popeye's Chicken": 1
+      },
+      {
+        "Popeyes Louisiana Kitchen": 1
+      },
+      {
+        "Ryan's": 1
+      },
+      {
+        "Sonic Drive In": 1
       }
     ],
     "total": 237
   },
   "MA": {
-    "top-3": [
+    "top-n": [
       {
         "Burger King": 30
       },
@@ -289,12 +2407,102 @@
       },
       {
         "Domino's Pizza": 14
+      },
+      {
+        "Wendy's": 10
+      },
+      {
+        "Taco Bell": 6
+      },
+      {
+        "Five Guys": 5
+      },
+      {
+        "Subway": 5
+      },
+      {
+        "Dunkin Donuts": 3
+      },
+      {
+        "Mcdonald's": 3
+      },
+      {
+        "Boston Market": 2
+      },
+      {
+        "Chick-fil-A": 2
+      },
+      {
+        "D'Angelo Grilled Sandwiches": 2
+      },
+      {
+        "Dunkin' Donuts": 2
+      },
+      {
+        "KFC": 2
+      },
+      {
+        "Papa Gino's": 2
+      },
+      {
+        "Pizza Hut": 2
+      },
+      {
+        "Arby's": 1
+      },
+      {
+        "B K": 1
+      },
+      {
+        "Blimpie": 1
+      },
+      {
+        "Blimpie Subs & Sandwiches": 1
+      },
+      {
+        "Bobby's Burger Palace": 1
+      },
+      {
+        "Boston Chowda Company": 1
+      },
+      {
+        "Chipotle Mexican Grill": 1
+      },
+      {
+        "Crown Fried Chicken": 1
+      },
+      {
+        "D'angelo Grilled Sandwiches": 1
+      },
+      {
+        "Fresh City": 1
+      },
+      {
+        "KFC/Taco Bell": 1
+      },
+      {
+        "McDonalds": 1
+      },
+      {
+        "Old Country Buffet": 1
+      },
+      {
+        "SUBWAY": 1
+      },
+      {
+        "Siam To Go": 1
+      },
+      {
+        "The Break Away Sports Cafe": 1
+      },
+      {
+        "Ziti's Italian Express": 1
       }
     ],
     "total": 131
   },
   "MD": {
-    "top-3": [
+    "top-n": [
       {
         "McDonald's": 32
       },
@@ -303,12 +2511,147 @@
       },
       {
         "Subway": 15
+      },
+      {
+        "Taco Bell": 11
+      },
+      {
+        "Wendy's": 11
+      },
+      {
+        "Boston Market": 6
+      },
+      {
+        "Arby's": 5
+      },
+      {
+        "Domino's Pizza": 5
+      },
+      {
+        "Five Guys": 5
+      },
+      {
+        "Checkers": 4
+      },
+      {
+        "Chick-fil-A": 4
+      },
+      {
+        "KFC": 3
+      },
+      {
+        "QDOBA Mexican Eats": 3
+      },
+      {
+        "Chick-Fil-A": 2
+      },
+      {
+        "Qdoba Mexican Grill": 2
+      },
+      {
+        "Roy Rogers": 2
+      },
+      {
+        "SUBWAY": 2
+      },
+      {
+        "BGR - The Burger Joint": 1
+      },
+      {
+        "Baja Fresh": 1
+      },
+      {
+        "Bojangles' Famous Chicken 'n Biscuits": 1
+      },
+      {
+        "Chick-fil-a": 1
+      },
+      {
+        "Dairy Freeze": 1
+      },
+      {
+        "Fab Wings N Burgers": 1
+      },
+      {
+        "Firehouse Subs": 1
+      },
+      {
+        "Hardee's": 1
+      },
+      {
+        "Hardee's / Red Burrito": 1
+      },
+      {
+        "Hardee's / Red Burrito / Dough Boys": 1
+      },
+      {
+        "Hardees": 1
+      },
+      {
+        "Hungry Andy's": 1
+      },
+      {
+        "Kings Contrivance Jewelers": 1
+      },
+      {
+        "McDonalds": 1
+      },
+      {
+        "Mcdonald's": 1
+      },
+      {
+        "Ny Chicken Fish": 1
+      },
+      {
+        "Pizza Hut": 1
+      },
+      {
+        "Pizza Primetime": 1
+      },
+      {
+        "Popeye's Chicken & Biscuits": 1
+      },
+      {
+        "Popeyes Chicken and Biscuits": 1
+      },
+      {
+        "Popeyes Louisiana Kitchen": 1
+      },
+      {
+        "Quiznos": 1
+      },
+      {
+        "SONIC Drive In": 1
+      },
+      {
+        "Sarku Japan": 1
+      },
+      {
+        "Simmies Arirang Hill Cheese Steak": 1
+      },
+      {
+        "Sonic Drive In": 1
+      },
+      {
+        "Sonic Drive-In": 1
+      },
+      {
+        "Subway - Roland Park": 1
+      },
+      {
+        "Tasty Carryout": 1
+      },
+      {
+        "Thrasher's French Fries": 1
+      },
+      {
+        "Tommy's Sub Shop": 1
       }
     ],
     "total": 159
   },
   "ME": {
-    "top-3": [
+    "top-n": [
       {
         "McDonald's": 12
       },
@@ -317,12 +2660,51 @@
       },
       {
         "Domino's Pizza": 4
+      },
+      {
+        "Subway": 4
+      },
+      {
+        "KFC": 3
+      },
+      {
+        "Wendy's": 3
+      },
+      {
+        "7-Eleven": 1
+      },
+      {
+        "Arby's": 1
+      },
+      {
+        "Blimpie": 1
+      },
+      {
+        "KFC / Taco Bell": 1
+      },
+      {
+        "Kfc": 1
+      },
+      {
+        "Panera Bread": 1
+      },
+      {
+        "Quiznos": 1
+      },
+      {
+        "Rapid Ray's": 1
+      },
+      {
+        "Taco Bell": 1
+      },
+      {
+        "Taqueria": 1
       }
     ],
     "total": 44
   },
   "MI": {
-    "top-3": [
+    "top-n": [
       {
         "Burger King": 55
       },
@@ -331,12 +2713,120 @@
       },
       {
         "Taco Bell": 28
+      },
+      {
+        "Wendy's": 25
+      },
+      {
+        "Arby's": 21
+      },
+      {
+        "Jimmy John's": 14
+      },
+      {
+        "KFC": 14
+      },
+      {
+        "Boston Market": 4
+      },
+      {
+        "White Castle": 4
+      },
+      {
+        "Checkers": 3
+      },
+      {
+        "Church's Chicken": 3
+      },
+      {
+        "Five Guys": 3
+      },
+      {
+        "Hardee's": 3
+      },
+      {
+        "Steak 'n Shake": 3
+      },
+      {
+        "Chick-fil-A": 2
+      },
+      {
+        "McDonalds": 2
+      },
+      {
+        "A&W": 1
+      },
+      {
+        "A&W All American Food": 1
+      },
+      {
+        "A&W All-American Food": 1
+      },
+      {
+        "Charlie Browns": 1
+      },
+      {
+        "Checker's": 1
+      },
+      {
+        "Culver's": 1
+      },
+      {
+        "Domino's Pizza": 1
+      },
+      {
+        "Kerby's Koney Island": 1
+      },
+      {
+        "Long John Silvers": 1
+      },
+      {
+        "Mc Donald's": 1
+      },
+      {
+        "Mcdonald's": 1
+      },
+      {
+        "Mcdonalds": 1
+      },
+      {
+        "Popeye's Chicken & Biscuits": 1
+      },
+      {
+        "Quiznos": 1
+      },
+      {
+        "Rally's": 1
+      },
+      {
+        "Rally's Hamburgers": 1
+      },
+      {
+        "SONIC Drive In": 1
+      },
+      {
+        "SUBWAY": 1
+      },
+      {
+        "Subway": 1
+      },
+      {
+        "Tubby's Grilled Submarines": 1
+      },
+      {
+        "Wendy Two Two Eight": 1
+      },
+      {
+        "Wendys": 1
+      },
+      {
+        "Wetzel's Pretzels": 1
       }
     ],
     "total": 251
   },
   "MN": {
-    "top-3": [
+    "top-n": [
       {
         "McDonald's": 27
       },
@@ -345,12 +2835,84 @@
       },
       {
         "Taco John's": 14
+      },
+      {
+        "Wendy's": 10
+      },
+      {
+        "Arby's": 9
+      },
+      {
+        "Taco Bell": 9
+      },
+      {
+        "Domino's Pizza": 6
+      },
+      {
+        "Hardee's": 6
+      },
+      {
+        "Culver's": 5
+      },
+      {
+        "Jimmy John's": 5
+      },
+      {
+        "KFC": 5
+      },
+      {
+        "SUBWAY": 5
+      },
+      {
+        "Subway": 4
+      },
+      {
+        "White Castle": 3
+      },
+      {
+        "Dairy Queen": 2
+      },
+      {
+        "McDonalds": 2
+      },
+      {
+        "Panera Bread": 2
+      },
+      {
+        "Pizza Hut": 2
+      },
+      {
+        "Chick-fil-A": 1
+      },
+      {
+        "Culvers": 1
+      },
+      {
+        "Fitness 19": 1
+      },
+      {
+        "Pei Wei": 1
+      },
+      {
+        "QDOBA Mexican Eats": 1
+      },
+      {
+        "Quiznos Sub": 1
+      },
+      {
+        "Sbarro": 1
+      },
+      {
+        "Topper's Pizza": 1
+      },
+      {
+        "Toppers Pizza": 1
       }
     ],
     "total": 148
   },
   "MO": {
-    "top-3": [
+    "top-n": [
       {
         "McDonald's": 71
       },
@@ -359,12 +2921,174 @@
       },
       {
         "SONIC Drive In": 33
+      },
+      {
+        "Wendy's": 20
+      },
+      {
+        "Arby's": 18
+      },
+      {
+        "Burger King": 16
+      },
+      {
+        "Subway": 11
+      },
+      {
+        "Jimmy John's": 10
+      },
+      {
+        "Hardee's": 9
+      },
+      {
+        "Jack in the Box": 9
+      },
+      {
+        "Domino's Pizza": 8
+      },
+      {
+        "KFC": 8
+      },
+      {
+        "Rally's": 4
+      },
+      {
+        "Sonic Drive-In": 4
+      },
+      {
+        "Steak 'n Shake": 4
+      },
+      {
+        "White Castle": 4
+      },
+      {
+        "Captain D's": 3
+      },
+      {
+        "Culver's": 3
+      },
+      {
+        "Dairy Queen": 3
+      },
+      {
+        "Lion's Choice": 3
+      },
+      {
+        "Raising Cane's Chicken Fingers": 3
+      },
+      {
+        "Chick-fil-A": 2
+      },
+      {
+        "Church's Chicken": 2
+      },
+      {
+        "Goodcents Deli Fresh Subs": 2
+      },
+      {
+        "Hardee's / Red Burrito": 2
+      },
+      {
+        "Lee's Famous Recipe Chicken": 2
+      },
+      {
+        "Long John Silvers": 2
+      },
+      {
+        "McDonalds": 2
+      },
+      {
+        "Mcdonald's": 2
+      },
+      {
+        "Mcdonalds": 2
+      },
+      {
+        "Rallys": 2
+      },
+      {
+        "Sonic Drive In": 2
+      },
+      {
+        "Bob Evans Restaurant": 1
+      },
+      {
+        "Chick-Fil-A": 1
+      },
+      {
+        "Eldon Drive In": 1
+      },
+      {
+        "Fallguys Burger Company": 1
+      },
+      {
+        "Fazoli's": 1
+      },
+      {
+        "Five Guys": 1
+      },
+      {
+        "Hardees": 1
+      },
+      {
+        "In-A-Tub": 1
+      },
+      {
+        "J J Fish and Chicken": 1
+      },
+      {
+        "Jimmy Johns": 1
+      },
+      {
+        "Kfc": 1
+      },
+      {
+        "King Grill": 1
+      },
+      {
+        "Kum & Go": 1
+      },
+      {
+        "Long John Silver's": 1
+      },
+      {
+        "Long John Silvers / A&W": 1
+      },
+      {
+        "Mc Donald's": 1
+      },
+      {
+        "Noodles & Company": 1
+      },
+      {
+        "Penn Station East Coast Subs": 1
+      },
+      {
+        "Pizza Hut": 1
+      },
+      {
+        "Popeye's": 1
+      },
+      {
+        "Quiznos": 1
+      },
+      {
+        "Redbox": 1
+      },
+      {
+        "Sonic": 1
+      },
+      {
+        "Taco John's": 1
+      },
+      {
+        "Waffle House": 1
       }
     ],
     "total": 334
   },
   "MS": {
-    "top-3": [
+    "top-n": [
       {
         "Domino's Pizza": 13
       },
@@ -373,12 +3097,66 @@
       },
       {
         "SONIC Drive In": 10
+      },
+      {
+        "Taco Bell": 8
+      },
+      {
+        "Wendy's": 8
+      },
+      {
+        "Hardee's": 6
+      },
+      {
+        "Burger King": 5
+      },
+      {
+        "KFC": 5
+      },
+      {
+        "Back Yard Burgers": 2
+      },
+      {
+        "Krystal": 2
+      },
+      {
+        "Pizza Hut": 2
+      },
+      {
+        "Sonic Drive-In": 2
+      },
+      {
+        "Captain D's": 1
+      },
+      {
+        "Checkers": 1
+      },
+      {
+        "Coop DeVille": 1
+      },
+      {
+        "Fred's Store": 1
+      },
+      {
+        "Moe's Southwest Grill": 1
+      },
+      {
+        "Popeyes Louisiana Kitchen": 1
+      },
+      {
+        "SONIC Drive-In": 1
+      },
+      {
+        "Sonic Drive-in": 1
+      },
+      {
+        "Subway": 1
       }
     ],
     "total": 82
   },
   "MT": {
-    "top-3": [
+    "top-n": [
       {
         "Domino's Pizza": 5
       },
@@ -387,12 +3165,36 @@
       },
       {
         "McDonald's": 3
+      },
+      {
+        "Hardee's": 2
+      },
+      {
+        "Quiznos": 2
+      },
+      {
+        "Taco Bell": 2
+      },
+      {
+        "Taco John's": 2
+      },
+      {
+        "Wendy's": 2
+      },
+      {
+        "Arby's": 1
+      },
+      {
+        "Jimmy John's": 1
+      },
+      {
+        "Pizza Hut": 1
       }
     ],
     "total": 25
   },
   "NC": {
-    "top-3": [
+    "top-n": [
       {
         "McDonald's": 63
       },
@@ -401,12 +3203,141 @@
       },
       {
         "Taco Bell": 37
+      },
+      {
+        "Wendy's": 37
+      },
+      {
+        "Arby's": 27
+      },
+      {
+        "Burger King": 25
+      },
+      {
+        "Hardee's": 16
+      },
+      {
+        "KFC": 13
+      },
+      {
+        "McDonalds": 10
+      },
+      {
+        "SONIC Drive In": 9
+      },
+      {
+        "Domino's Pizza": 8
+      },
+      {
+        "Subway": 7
+      },
+      {
+        "Chick-fil-A": 5
+      },
+      {
+        "Mcdonald's": 5
+      },
+      {
+        "Chick-Fil-A": 4
+      },
+      {
+        "Waffle House": 4
+      },
+      {
+        "Cook Out": 3
+      },
+      {
+        "Jimmy John's": 3
+      },
+      {
+        "Boston Market": 2
+      },
+      {
+        "Cook-Out": 2
+      },
+      {
+        "Hardee's / Red Burrito": 2
+      },
+      {
+        "Jack in the Box": 2
+      },
+      {
+        "Papa John's Pizza": 2
+      },
+      {
+        "Quiznos": 2
+      },
+      {
+        "Sonic Drive-In": 2
+      },
+      {
+        "Zaxby's": 2
+      },
+      {
+        "Bad Daddys Burger Bar": 1
+      },
+      {
+        "Bb&t": 1
+      },
+      {
+        "Captain D's": 1
+      },
+      {
+        "Char-Grill": 1
+      },
+      {
+        "Chick-fil-a": 1
+      },
+      {
+        "Chris' Drive-In": 1
+      },
+      {
+        "Circle Drive In": 1
+      },
+      {
+        "Dairy Queen": 1
+      },
+      {
+        "Firehouse Subs": 1
+      },
+      {
+        "Great Steak And Potato Co": 1
+      },
+      {
+        "Italian Pizzeria Restaurant": 1
+      },
+      {
+        "KFC - Kentucky Fried Chicken": 1
+      },
+      {
+        "Kfc": 1
+      },
+      {
+        "Little Caesar's Pizza Smithfield": 1
+      },
+      {
+        "Mcdonalds": 1
+      },
+      {
+        "Ryan's": 1
+      },
+      {
+        "Sonic Drive In": 1
+      },
+      {
+        "Steak 'n Shake": 1
+      },
+      {
+        "The Agora": 1
+      },
+      {
+        "The Biscuit Factory": 1
       }
     ],
     "total": 358
   },
   "ND": {
-    "top-3": [
+    "top-n": [
       {
         "Taco John's": 8
       },
@@ -415,12 +3346,54 @@
       },
       {
         "Burger King": 6
+      },
+      {
+        "Hardee's": 6
+      },
+      {
+        "Domino's Pizza": 4
+      },
+      {
+        "Arby's": 3
+      },
+      {
+        "Pizza Hut": 3
+      },
+      {
+        "Taco Bell": 3
+      },
+      {
+        "Subway": 2
+      },
+      {
+        "Culver's": 1
+      },
+      {
+        "Dominos Pizza": 1
+      },
+      {
+        "Five Guys": 1
+      },
+      {
+        "KFC": 1
+      },
+      {
+        "QDOBA Mexican Eats": 1
+      },
+      {
+        "Quiznos": 1
+      },
+      {
+        "The Pita Pit": 1
+      },
+      {
+        "Wendy's": 1
       }
     ],
     "total": 50
   },
   "NE": {
-    "top-3": [
+    "top-n": [
       {
         "Arby's": 12
       },
@@ -429,12 +3402,87 @@
       },
       {
         "Burger King": 8
+      },
+      {
+        "Subway": 7
+      },
+      {
+        "Domino's Pizza": 6
+      },
+      {
+        "Runza": 6
+      },
+      {
+        "Amigos/Kings Classic": 5
+      },
+      {
+        "Taco Bell": 5
+      },
+      {
+        "Taco John's": 5
+      },
+      {
+        "Jimmy John's": 4
+      },
+      {
+        "Sonic Drive-In": 4
+      },
+      {
+        "Dairy Queen": 2
+      },
+      {
+        "McDonalds": 2
+      },
+      {
+        "Wendy's": 2
+      },
+      {
+        "Blimpie": 1
+      },
+      {
+        "Chick-fil-A": 1
+      },
+      {
+        "Culver's": 1
+      },
+      {
+        "Don & Millie's": 1
+      },
+      {
+        "Famous Dave's": 1
+      },
+      {
+        "Five Guys": 1
+      },
+      {
+        "KFC": 1
+      },
+      {
+        "Mcdonald's": 1
+      },
+      {
+        "Panera Bread": 1
+      },
+      {
+        "Pizza Hut": 1
+      },
+      {
+        "Popeye's Chicken & Biscuits": 1
+      },
+      {
+        "Quiznos": 1
+      },
+      {
+        "SONIC Drive In": 1
+      },
+      {
+        "Sbarro": 1
       }
     ],
     "total": 92
   },
   "NH": {
-    "top-3": [
+    "top-n": [
       {
         "McDonald's": 9
       },
@@ -443,12 +3491,48 @@
       },
       {
         "Wendy's": 4
+      },
+      {
+        "Taco Bell": 3
+      },
+      {
+        "Chick-fil-A": 2
+      },
+      {
+        "Domino's Pizza": 2
+      },
+      {
+        "Five Guys": 2
+      },
+      {
+        "KFC": 2
+      },
+      {
+        "Papa Gino's": 2
+      },
+      {
+        "Arby's": 1
+      },
+      {
+        "Dominos Pizza": 1
+      },
+      {
+        "Gianni's Pizza": 1
+      },
+      {
+        "Pizza Express": 1
+      },
+      {
+        "SUBWAY": 1
+      },
+      {
+        "Sarku Japan": 1
       }
     ],
     "total": 36
   },
   "NJ": {
-    "top-3": [
+    "top-n": [
       {
         "McDonald's": 37
       },
@@ -457,12 +3541,150 @@
       },
       {
         "Wendy's": 9
+      },
+      {
+        "Domino's Pizza": 8
+      },
+      {
+        "KFC": 8
+      },
+      {
+        "SUBWAY": 6
+      },
+      {
+        "Taco Bell": 5
+      },
+      {
+        "Boston Market": 4
+      },
+      {
+        "Five Guys": 4
+      },
+      {
+        "Arby's": 2
+      },
+      {
+        "Blimpie": 2
+      },
+      {
+        "Dairy Queen": 2
+      },
+      {
+        "Dunkin Donuts": 2
+      },
+      {
+        "Panda Express": 2
+      },
+      {
+        "Quiznos": 2
+      },
+      {
+        "White Castle": 2
+      },
+      {
+        "Ama Ristorante": 1
+      },
+      {
+        "Baja Fresh": 1
+      },
+      {
+        "Car's Late Night Delivery": 1
+      },
+      {
+        "Checkers": 1
+      },
+      {
+        "Chick-fil-A": 1
+      },
+      {
+        "Chipotle Mexican Grill": 1
+      },
+      {
+        "Comilao Lanches Bakery": 1
+      },
+      {
+        "Cusinera": 1
+      },
+      {
+        "Custard Hut & Pizza": 1
+      },
+      {
+        "Dunkin' Donuts": 1
+      },
+      {
+        "Hardee's": 1
+      },
+      {
+        "Hotdoks": 1
+      },
+      {
+        "Jersey Mike's Subs": 1
+      },
+      {
+        "Jimmy John's": 1
+      },
+      {
+        "Lime Ricky World": 1
+      },
+      {
+        "Luby's": 1
+      },
+      {
+        "Mayfair Boardwalk Grill": 1
+      },
+      {
+        "Mcdonald's": 1
+      },
+      {
+        "Papa John's Pizza": 1
+      },
+      {
+        "Papa Johns Pizza": 1
+      },
+      {
+        "Pei Wei": 1
+      },
+      {
+        "Pizza One": 1
+      },
+      {
+        "Popeye's": 1
+      },
+      {
+        "Popeye's Chicken & Biscuits": 1
+      },
+      {
+        "Rahway Chicken & Burger Inc": 1
+      },
+      {
+        "SONIC Drive-In": 1
+      },
+      {
+        "Seaside Eatery": 1
+      },
+      {
+        "ShopRite": 1
+      },
+      {
+        "The Chicken Place": 1
+      },
+      {
+        "Travelcenters of America": 1
+      },
+      {
+        "White Manna Hamburgers": 1
+      },
+      {
+        "Windmill Gourmet Fast Foods": 1
+      },
+      {
+        "b.good": 1
       }
     ],
     "total": 151
   },
   "NM": {
-    "top-3": [
+    "top-n": [
       {
         "Domino's Pizza": 22
       },
@@ -471,12 +3693,108 @@
       },
       {
         "McDonald's": 15
+      },
+      {
+        "Taco Bell": 15
+      },
+      {
+        "Arby's": 7
+      },
+      {
+        "Burger King": 7
+      },
+      {
+        "McDonalds": 6
+      },
+      {
+        "Wendy's": 6
+      },
+      {
+        "Blake's Lotaburger": 5
+      },
+      {
+        "Subway": 5
+      },
+      {
+        "KFC": 4
+      },
+      {
+        "Pizza Hut": 4
+      },
+      {
+        "SONIC Drive In": 4
+      },
+      {
+        "Carl's Jr.": 2
+      },
+      {
+        "Dairy Queen": 2
+      },
+      {
+        "Mcdonald's": 2
+      },
+      {
+        "Taco Cabana": 2
+      },
+      {
+        "Whataburger": 2
+      },
+      {
+        "BLIMPIE": 1
+      },
+      {
+        "Blake's LotaBurger": 1
+      },
+      {
+        "Blakes Lotaburger": 1
+      },
+      {
+        "Burger Time": 1
+      },
+      {
+        "Church's Chicken": 1
+      },
+      {
+        "Del Taco": 1
+      },
+      {
+        "El Paragua Restaurant": 1
+      },
+      {
+        "Firehouse Subs": 1
+      },
+      {
+        "Furr's": 1
+      },
+      {
+        "Grandy's": 1
+      },
+      {
+        "Jersey Jacks Eatery": 1
+      },
+      {
+        "Jimmy John's": 1
+      },
+      {
+        "Pei Wei": 1
+      },
+      {
+        "SUBWAY": 1
+      },
+      {
+        "Sbarro": 1
+      },
+      {
+        "Twisters": 1
+      },
+      {
+        "Wienerschnitzel": 1
       }
     ],
     "total": 149
   },
   "NV": {
-    "top-3": [
+    "top-n": [
       {
         "McDonald's": 15
       },
@@ -485,12 +3803,153 @@
       },
       {
         "Domino's Pizza": 8
+      },
+      {
+        "Jack in the Box": 8
+      },
+      {
+        "Taco Bell": 7
+      },
+      {
+        "Wendy's": 7
+      },
+      {
+        "Pizza Hut": 6
+      },
+      {
+        "Carl's Jr.": 5
+      },
+      {
+        "Del Taco": 5
+      },
+      {
+        "Subway": 5
+      },
+      {
+        "Dairy Queen": 4
+      },
+      {
+        "KFC": 4
+      },
+      {
+        "El Pollo Loco": 3
+      },
+      {
+        "Little Caesars Pizza": 3
+      },
+      {
+        "SONIC Drive In": 3
+      },
+      {
+        "Arby's": 2
+      },
+      {
+        "Baja Fresh": 2
+      },
+      {
+        "Capriotti's Sandwich Shop": 2
+      },
+      {
+        "Farmer Boys": 2
+      },
+      {
+        "Five Guys": 2
+      },
+      {
+        "Jimmy John's": 2
+      },
+      {
+        "Quiznos": 2
+      },
+      {
+        "A&W All American Food": 1
+      },
+      {
+        "Boston Market": 1
+      },
+      {
+        "Carl's Jr. / Green Burrito": 1
+      },
+      {
+        "Checkers": 1
+      },
+      {
+        "Dominos Pizza": 1
+      },
+      {
+        "Ernie's All American Burger": 1
+      },
+      {
+        "Fatburger": 1
+      },
+      {
+        "Firehouse Subs": 1
+      },
+      {
+        "Hot Dog Heaven": 1
+      },
+      {
+        "Hot Dog On A Stick": 1
+      },
+      {
+        "Jack In The Box": 1
+      },
+      {
+        "Jamba Juice": 1
+      },
+      {
+        "Johnny Rockets": 1
+      },
+      {
+        "Luxor Food Court": 1
+      },
+      {
+        "McDonalds": 1
+      },
+      {
+        "Mcdonalds": 1
+      },
+      {
+        "Nathan's Famous": 1
+      },
+      {
+        "Panda Express": 1
+      },
+      {
+        "Pizza Barn": 1
+      },
+      {
+        "Port Of Subs": 1
+      },
+      {
+        "Qdoba Mexican Grill": 1
+      },
+      {
+        "Raising Cane's": 1
+      },
+      {
+        "SUBWAY": 1
+      },
+      {
+        "Scoopers": 1
+      },
+      {
+        "Taco Time": 1
+      },
+      {
+        "Taqueria": 1
+      },
+      {
+        "Tropical Smoothie Cafe": 1
+      },
+      {
+        "Wienerschnitzel": 1
       }
     ],
     "total": 135
   },
   "NY": {
-    "top-3": [
+    "top-n": [
       {
         "McDonald's": 64
       },
@@ -499,12 +3958,120 @@
       },
       {
         "Taco Bell": 23
+      },
+      {
+        "KFC": 15
+      },
+      {
+        "Wendy's": 15
+      },
+      {
+        "Domino's Pizza": 12
+      },
+      {
+        "Subway": 12
+      },
+      {
+        "Arby's": 8
+      },
+      {
+        "Five Guys": 8
+      },
+      {
+        "Dunkin' Donuts": 7
+      },
+      {
+        "SUBWAY": 6
+      },
+      {
+        "Mcdonald's": 4
+      },
+      {
+        "Little Caesars Pizza": 3
+      },
+      {
+        "Baskin-Robbins": 2
+      },
+      {
+        "Chipotle Mexican Grill": 2
+      },
+      {
+        "Dairy Queen": 2
+      },
+      {
+        "McDonalds": 2
+      },
+      {
+        "Pizza Hut": 2
+      },
+      {
+        "Popeye's": 2
+      },
+      {
+        "Popeyes Chicken and Biscuits": 2
+      },
+      {
+        "31st Avenue Gyro": 1
+      },
+      {
+        "B. Good": 1
+      },
+      {
+        "Blimpie": 1
+      },
+      {
+        "Checkers": 1
+      },
+      {
+        "Chester's Grill": 1
+      },
+      {
+        "Chickenow": 1
+      },
+      {
+        "Dairy Queen Grill & Chill / Orange Julius": 1
+      },
+      {
+        "Fuku": 1
+      },
+      {
+        "Hoka Hoka Bento": 1
+      },
+      {
+        "Kennedy Fried Chicken & Pizza": 1
+      },
+      {
+        "Mc Donald's": 1
+      },
+      {
+        "Mcdonalds": 1
+      },
+      {
+        "Papa John's Pizza": 1
+      },
+      {
+        "Popeyes": 1
+      },
+      {
+        "Popeyes Louisiana Kitchen": 1
+      },
+      {
+        "Quiznos": 1
+      },
+      {
+        "SUBWAY\u00ae": 1
+      },
+      {
+        "Smashburger": 1
+      },
+      {
+        "White Castle": 1
       }
     ],
     "total": 269
   },
   "OH": {
-    "top-3": [
+    "top-n": [
       {
         "McDonald's": 102
       },
@@ -513,12 +4080,213 @@
       },
       {
         "Wendy's": 69
+      },
+      {
+        "Taco Bell": 53
+      },
+      {
+        "Arby's": 48
+      },
+      {
+        "KFC": 24
+      },
+      {
+        "White Castle": 22
+      },
+      {
+        "Jimmy John's": 14
+      },
+      {
+        "Gold Star Chili": 8
+      },
+      {
+        "McDonalds": 8
+      },
+      {
+        "Boston Market": 7
+      },
+      {
+        "Waffle House": 7
+      },
+      {
+        "Mr Hero": 6
+      },
+      {
+        "Hardee's": 5
+      },
+      {
+        "Mcdonalds": 5
+      },
+      {
+        "Rally's": 5
+      },
+      {
+        "Skyline Chili": 5
+      },
+      {
+        "Domino's Pizza": 4
+      },
+      {
+        "Mcdonald's": 4
+      },
+      {
+        "Penn Station East Coast Subs": 4
+      },
+      {
+        "Chick-fil-A": 3
+      },
+      {
+        "Dairy Queen": 3
+      },
+      {
+        "Five Guys": 3
+      },
+      {
+        "Kfc": 3
+      },
+      {
+        "Long John Silver's": 3
+      },
+      {
+        "Sonic Drive-In": 3
+      },
+      {
+        "Steak 'n Shake": 3
+      },
+      {
+        "Church's Chicken": 2
+      },
+      {
+        "Jack in the Box": 2
+      },
+      {
+        "Mr. Hero": 2
+      },
+      {
+        "Pizza Hut": 2
+      },
+      {
+        "Raising Cane's": 2
+      },
+      {
+        "Rally's Hamburgers": 2
+      },
+      {
+        "SONIC Drive In": 2
+      },
+      {
+        "Burger King Salou": 1
+      },
+      {
+        "Captain D's": 1
+      },
+      {
+        "Captain D's Seafood": 1
+      },
+      {
+        "Charley's Grilled Subs": 1
+      },
+      {
+        "Chipotle Mexican Grill": 1
+      },
+      {
+        "DQ Grill & Chill / Orange Julius": 1
+      },
+      {
+        "Dairy Isle": 1
+      },
+      {
+        "Dominos Pizza": 1
+      },
+      {
+        "Dq Grill & Chill": 1
+      },
+      {
+        "Fazoli's": 1
+      },
+      {
+        "Frisch's Big Boy": 1
+      },
+      {
+        "Great Steak": 1
+      },
+      {
+        "Greyhound": 1
+      },
+      {
+        "Hardee's / Red Burrito": 1
+      },
+      {
+        "Jimmy John's Gourmet Sandwiches": 1
+      },
+      {
+        "Jolly's Drive-In": 1
+      },
+      {
+        "Long John Silvers": 1
+      },
+      {
+        "OMG! Rotisserie": 1
+      },
+      {
+        "Panda Express": 1
+      },
+      {
+        "Popeye's Louisiana Kitchen": 1
+      },
+      {
+        "Popeyes Louisiana Kitchen": 1
+      },
+      {
+        "QDOBA Mexican Eats": 1
+      },
+      {
+        "Raising Cane's Chicken Fingers": 1
+      },
+      {
+        "Rallys": 1
+      },
+      {
+        "Rancher's Roast Beef Inc.": 1
+      },
+      {
+        "Richie's Restaurant": 1
+      },
+      {
+        "Ryan's": 1
+      },
+      {
+        "SUBWAY": 1
+      },
+      {
+        "Sarku Japan": 1
+      },
+      {
+        "Starbucks": 1
+      },
+      {
+        "Steak 'N Shake": 1
+      },
+      {
+        "Subway": 1
+      },
+      {
+        "Taco Local": 1
+      },
+      {
+        "Tina's Carryout Restaurant": 1
+      },
+      {
+        "Wendys": 1
+      },
+      {
+        "Your Healthy Habit": 1
       }
     ],
     "total": 543
   },
   "OK": {
-    "top-3": [
+    "top-n": [
       {
         "McDonald's": 50
       },
@@ -527,12 +4295,129 @@
       },
       {
         "Arby's": 18
+      },
+      {
+        "SONIC Drive In": 18
+      },
+      {
+        "KFC": 12
+      },
+      {
+        "Sonic Drive-In": 10
+      },
+      {
+        "Domino's Pizza": 9
+      },
+      {
+        "Burger King": 6
+      },
+      {
+        "Subway": 6
+      },
+      {
+        "Wendy's": 6
+      },
+      {
+        "Carl's Jr.": 4
+      },
+      {
+        "Jimmy John's": 4
+      },
+      {
+        "Church's Chicken": 3
+      },
+      {
+        "Mcdonald's": 3
+      },
+      {
+        "Pizza Hut": 3
+      },
+      {
+        "Taco Bueno": 3
+      },
+      {
+        "A&w Restaurant": 2
+      },
+      {
+        "Chick-Fil-A": 2
+      },
+      {
+        "Chick-fil-A": 2
+      },
+      {
+        "Pei Wei": 2
+      },
+      {
+        "SUBWAY": 2
+      },
+      {
+        "Taco Mayo": 2
+      },
+      {
+        "Waffle House": 2
+      },
+      {
+        "Braum's": 1
+      },
+      {
+        "Braum's Ice Cream & Dairy Store": 1
+      },
+      {
+        "Carl's Jr": 1
+      },
+      {
+        "Charlie's Chicken": 1
+      },
+      {
+        "City Bites": 1
+      },
+      {
+        "Five Guys": 1
+      },
+      {
+        "Golden Chick": 1
+      },
+      {
+        "Hamburger King": 1
+      },
+      {
+        "Jack In The Box": 1
+      },
+      {
+        "Jack in the Box": 1
+      },
+      {
+        "Kum & Go": 1
+      },
+      {
+        "Long John Silver's": 1
+      },
+      {
+        "Long John Silver/ A&W": 1
+      },
+      {
+        "McLaren's Pantry": 1
+      },
+      {
+        "Northeastern State University": 1
+      },
+      {
+        "Popeye's Chicken & Biscuits": 1
+      },
+      {
+        "Sonic Drive in": 1
+      },
+      {
+        "Sonic Drive-in": 1
+      },
+      {
+        "Whataburger": 1
       }
     ],
     "total": 208
   },
   "OR": {
-    "top-3": [
+    "top-n": [
       {
         "McDonald's": 23
       },
@@ -541,12 +4426,102 @@
       },
       {
         "Taco Bell": 12
+      },
+      {
+        "Subway": 8
+      },
+      {
+        "Wendy's": 6
+      },
+      {
+        "Domino's Pizza": 5
+      },
+      {
+        "Arby's": 4
+      },
+      {
+        "Dairy Queen": 4
+      },
+      {
+        "Jack in the Box": 4
+      },
+      {
+        "Carl's Jr.": 3
+      },
+      {
+        "Five Guys": 3
+      },
+      {
+        "KFC": 3
+      },
+      {
+        "Taco Time": 3
+      },
+      {
+        "Jimmy John's": 2
+      },
+      {
+        "Kentucky Fried Chicken": 2
+      },
+      {
+        "A&W All American Food": 1
+      },
+      {
+        "Aprisa Mexican Cuisine": 1
+      },
+      {
+        "Arctic Circle": 1
+      },
+      {
+        "Baja Fresh": 1
+      },
+      {
+        "Burgerville": 1
+      },
+      {
+        "Burgerville, USA": 1
+      },
+      {
+        "Del Taco": 1
+      },
+      {
+        "Dominos Pizza": 1
+      },
+      {
+        "Hometown Buffet": 1
+      },
+      {
+        "Long John Silver's": 1
+      },
+      {
+        "Mazatlan Mexican Restaurant": 1
+      },
+      {
+        "McDonalds": 1
+      },
+      {
+        "Mocha Express": 1
+      },
+      {
+        "SUBWAY": 1
+      },
+      {
+        "Taco Delight": 1
+      },
+      {
+        "Taqueria": 1
+      },
+      {
+        "The Press Club": 1
+      },
+      {
+        "Wetzel's Pretzels": 1
       }
     ],
     "total": 114
   },
   "PA": {
-    "top-3": [
+    "top-n": [
       {
         "McDonald's": 62
       },
@@ -555,12 +4530,147 @@
       },
       {
         "Wendy's": 42
+      },
+      {
+        "Arby's": 21
+      },
+      {
+        "KFC": 21
+      },
+      {
+        "Taco Bell": 13
+      },
+      {
+        "Five Guys": 6
+      },
+      {
+        "McDonalds": 5
+      },
+      {
+        "Subway": 4
+      },
+      {
+        "Dairy Queen": 3
+      },
+      {
+        "Hardee's": 3
+      },
+      {
+        "Mcdonald's": 3
+      },
+      {
+        "Saladworks": 3
+      },
+      {
+        "Boston Market": 2
+      },
+      {
+        "Chick-fil-A": 2
+      },
+      {
+        "Domino's Pizza": 2
+      },
+      {
+        "Dominos Pizza": 2
+      },
+      {
+        "Kfc": 2
+      },
+      {
+        "Long John Silver's": 2
+      },
+      {
+        "SONIC Drive In": 2
+      },
+      {
+        "SUBWAY": 2
+      },
+      {
+        "Waffle House": 2
+      },
+      {
+        "A&W/Long John Silvers": 1
+      },
+      {
+        "Au Bon Pain": 1
+      },
+      {
+        "Auntie Anne's": 1
+      },
+      {
+        "Blondies": 1
+      },
+      {
+        "Boston Market 381": 1
+      },
+      {
+        "Checkers Burgers and Fries": 1
+      },
+      {
+        "Cherry Hill Drive In Ice Cream": 1
+      },
+      {
+        "Chick-Fil-A": 1
+      },
+      {
+        "Chick-fil-a": 1
+      },
+      {
+        "China Buddha Inn II": 1
+      },
+      {
+        "Crown Fried Chicken": 1
+      },
+      {
+        "Exxon": 1
+      },
+      {
+        "Kasa's Pizza": 1
+      },
+      {
+        "Kenny's Drive-In": 1
+      },
+      {
+        "Long John Silvers": 1
+      },
+      {
+        "Mc Donald's": 1
+      },
+      {
+        "Mcdonald's - Walmart": 1
+      },
+      {
+        "Panera Bread": 1
+      },
+      {
+        "Pizza Hut": 1
+      },
+      {
+        "Pop-A-Nugget": 1
+      },
+      {
+        "Quiznos": 1
+      },
+      {
+        "Sensenig Poultry LLC": 1
+      },
+      {
+        "Sheetz": 1
+      },
+      {
+        "Sonic Drive-In": 1
+      },
+      {
+        "Subway Citgo of Quarryville": 1
+      },
+      {
+        "Woody's Sloppy Dogs": 1
       }
     ],
     "total": 283
   },
   "RI": {
-    "top-3": [
+    "top-n": [
       {
         "Burger King": 5
       },
@@ -569,12 +4679,33 @@
       },
       {
         "KFC": 3
+      },
+      {
+        "McDonald's": 3
+      },
+      {
+        "Domino's Pizza": 2
+      },
+      {
+        "SUBWAY": 2
+      },
+      {
+        "Subway": 2
+      },
+      {
+        "B Z Breakfast Burgers Beyond": 1
+      },
+      {
+        "Greek Oven Pizza and Wings": 1
+      },
+      {
+        "Royal Buffet": 1
       }
     ],
     "total": 24
   },
   "SC": {
-    "top-3": [
+    "top-n": [
       {
         "McDonald's": 42
       },
@@ -583,12 +4714,144 @@
       },
       {
         "Bojangles' Famous Chicken 'n Biscuits": 23
+      },
+      {
+        "Waffle House": 17
+      },
+      {
+        "Taco Bell": 13
+      },
+      {
+        "Wendy's": 13
+      },
+      {
+        "Arby's": 11
+      },
+      {
+        "Subway": 11
+      },
+      {
+        "KFC": 9
+      },
+      {
+        "Domino's Pizza": 8
+      },
+      {
+        "Hardee's": 8
+      },
+      {
+        "SONIC Drive In": 7
+      },
+      {
+        "Chick-fil-A": 5
+      },
+      {
+        "Mcdonald's": 3
+      },
+      {
+        "Pizza Hut": 3
+      },
+      {
+        "Sonic Drive-In": 3
+      },
+      {
+        "Captain D's": 2
+      },
+      {
+        "Checkers": 2
+      },
+      {
+        "Jack in the Box": 2
+      },
+      {
+        "McDonalds": 2
+      },
+      {
+        "Auntie Anne's": 1
+      },
+      {
+        "Blimpie": 1
+      },
+      {
+        "Captain D's Seafood": 1
+      },
+      {
+        "Chick-Fil-A": 1
+      },
+      {
+        "Chick-fil-a": 1
+      },
+      {
+        "Chick-fil-a Magnolia Mall": 1
+      },
+      {
+        "Cookout": 1
+      },
+      {
+        "Fazoli's": 1
+      },
+      {
+        "Five Guys": 1
+      },
+      {
+        "Golden Chick": 1
+      },
+      {
+        "Jack In The Box": 1
+      },
+      {
+        "Jersey Mike's Subs": 1
+      },
+      {
+        "Jimmy John's": 1
+      },
+      {
+        "Jimmy Johns": 1
+      },
+      {
+        "Kfc": 1
+      },
+      {
+        "Krystal": 1
+      },
+      {
+        "Love's": 1
+      },
+      {
+        "Panda Express": 1
+      },
+      {
+        "Papa John's Pizza": 1
+      },
+      {
+        "Pita Pit": 1
+      },
+      {
+        "Rush's": 1
+      },
+      {
+        "Ryan's": 1
+      },
+      {
+        "Sarku Japan": 1
+      },
+      {
+        "Smoothie King": 1
+      },
+      {
+        "Sonic Drive In": 1
+      },
+      {
+        "St Louis Original Hamburgers": 1
+      },
+      {
+        "Steak 'n Shake": 1
       }
     ],
     "total": 238
   },
   "SD": {
-    "top-3": [
+    "top-n": [
       {
         "McDonald's": 17
       },
@@ -597,12 +4860,69 @@
       },
       {
         "Domino's Pizza": 11
+      },
+      {
+        "Burger King": 10
+      },
+      {
+        "Arby's": 8
+      },
+      {
+        "Dairy Queen": 8
+      },
+      {
+        "Subway": 6
+      },
+      {
+        "Wendy's": 5
+      },
+      {
+        "Culver's": 4
+      },
+      {
+        "Hardee's": 4
+      },
+      {
+        "Taco Bell": 4
+      },
+      {
+        "Jimmy John's": 3
+      },
+      {
+        "Pizza Hut": 2
+      },
+      {
+        "SUBWAY": 2
+      },
+      {
+        "KFC": 1
+      },
+      {
+        "Kfc": 1
+      },
+      {
+        "McDonalds": 1
+      },
+      {
+        "Qdoba Mexican Eats": 1
+      },
+      {
+        "Quiznos": 1
+      },
+      {
+        "SONIC Drive In": 1
+      },
+      {
+        "Slim Chickens": 1
+      },
+      {
+        "Sonic Drive In": 1
       }
     ],
     "total": 105
   },
   "TN": {
-    "top-3": [
+    "top-n": [
       {
         "McDonald's": 39
       },
@@ -611,12 +4931,165 @@
       },
       {
         "Krystal": 19
+      },
+      {
+        "Wendy's": 17
+      },
+      {
+        "Taco Bell": 16
+      },
+      {
+        "Arby's": 12
+      },
+      {
+        "Hardee's": 11
+      },
+      {
+        "KFC": 10
+      },
+      {
+        "SONIC Drive In": 10
+      },
+      {
+        "Sonic Drive-In": 10
+      },
+      {
+        "Bojangles' Famous Chicken 'n Biscuits": 9
+      },
+      {
+        "Checkers": 5
+      },
+      {
+        "Domino's Pizza": 5
+      },
+      {
+        "Chick-fil-A": 4
+      },
+      {
+        "Pizza Hut": 4
+      },
+      {
+        "Waffle House": 4
+      },
+      {
+        "Five Guys": 3
+      },
+      {
+        "Back Yard Burgers": 2
+      },
+      {
+        "Culver's": 2
+      },
+      {
+        "Jimmy John's": 2
+      },
+      {
+        "Sonic Drive-in": 2
+      },
+      {
+        "Subway": 2
+      },
+      {
+        "Captain D's": 1
+      },
+      {
+        "Chick-Fil-A": 1
+      },
+      {
+        "Cook Out": 1
+      },
+      {
+        "Dairy Queen": 1
+      },
+      {
+        "Denton's": 1
+      },
+      {
+        "Dominos Pizza": 1
+      },
+      {
+        "Dunkin' Donuts": 1
+      },
+      {
+        "Fazoli's": 1
+      },
+      {
+        "Gabby's Burgers & Fries": 1
+      },
+      {
+        "Hardee's / Red Burrito": 1
+      },
+      {
+        "Jack Pirtles Chicken": 1
+      },
+      {
+        "Jack in the Box": 1
+      },
+      {
+        "Jersey Mike's Subs": 1
+      },
+      {
+        "Kentucky Fried Chicken": 1
+      },
+      {
+        "Lenny's Sub Shop": 1
+      },
+      {
+        "Long John Silver's": 1
+      },
+      {
+        "McDonalds": 1
+      },
+      {
+        "Mcalister's Deli": 1
+      },
+      {
+        "Mcdonald's": 1
+      },
+      {
+        "Mcdonalds": 1
+      },
+      {
+        "Music City Subs": 1
+      },
+      {
+        "Pal's Sudden Service": 1
+      },
+      {
+        "Petro's Chili & Chips": 1
+      },
+      {
+        "Popeye's Chicken & Biscuits": 1
+      },
+      {
+        "QDOBA Mexican Eats": 1
+      },
+      {
+        "Qdoba Mexican Grill": 1
+      },
+      {
+        "Quiznos": 1
+      },
+      {
+        "Rafael's": 1
+      },
+      {
+        "Sonic Drive In": 1
+      },
+      {
+        "Steak 'n Shake": 1
+      },
+      {
+        "Steak N Shake": 1
+      },
+      {
+        "The Honeybaked Ham Company": 1
       }
     ],
     "total": 245
   },
   "TX": {
-    "top-3": [
+    "top-n": [
       {
         "McDonald's": 144
       },
@@ -625,12 +5098,252 @@
       },
       {
         "Taco Bell": 63
+      },
+      {
+        "Jack in the Box": 49
+      },
+      {
+        "Burger King": 47
+      },
+      {
+        "Wendy's": 26
+      },
+      {
+        "KFC": 20
+      },
+      {
+        "SONIC Drive In": 18
+      },
+      {
+        "Subway": 14
+      },
+      {
+        "Dairy Queen": 11
+      },
+      {
+        "Chicken Express": 10
+      },
+      {
+        "Mcdonald's": 10
+      },
+      {
+        "McDonalds": 9
+      },
+      {
+        "Arby's": 6
+      },
+      {
+        "Church's Chicken": 6
+      },
+      {
+        "Domino's Pizza": 6
+      },
+      {
+        "Sonic": 6
+      },
+      {
+        "Sonic Drive In": 6
+      },
+      {
+        "Jimmy John's": 5
+      },
+      {
+        "Waffle House": 5
+      },
+      {
+        "Carl's Jr.": 4
+      },
+      {
+        "Chick-Fil-A": 4
+      },
+      {
+        "Chick-fil-A": 4
+      },
+      {
+        "Jack In The Box": 4
+      },
+      {
+        "Sonic Drive-In": 4
+      },
+      {
+        "Taco Bueno": 4
+      },
+      {
+        "Mcdonalds": 3
+      },
+      {
+        "SUBWAY": 3
+      },
+      {
+        "Boston Market": 2
+      },
+      {
+        "Chick-fil-a": 2
+      },
+      {
+        "Five Guys": 2
+      },
+      {
+        "Golden Chick": 2
+      },
+      {
+        "Little Caesars Pizza": 2
+      },
+      {
+        "Long John Silver's": 2
+      },
+      {
+        "Long John Silvers": 2
+      },
+      {
+        "Pei Wei": 2
+      },
+      {
+        "Popeye's": 2
+      },
+      {
+        "Popeyes": 2
+      },
+      {
+        "Redbox": 2
+      },
+      {
+        "Schlotzsky's": 2
+      },
+      {
+        "Slim Chickens": 2
+      },
+      {
+        "Sonic Drive-in": 2
+      },
+      {
+        "Wienerschnitzel": 2
+      },
+      {
+        "A&W Restaurant": 1
+      },
+      {
+        "Arbys": 1
+      },
+      {
+        "Braum's": 1
+      },
+      {
+        "Bush's Chicken": 1
+      },
+      {
+        "Carl's Jr": 1
+      },
+      {
+        "Crispy Chicken & Seafood": 1
+      },
+      {
+        "DQ Woodlands": 1
+      },
+      {
+        "Dairy Queen - Round Rock": 1
+      },
+      {
+        "Dan's Seafood & Chicken": 1
+      },
+      {
+        "El Pollo Loco": 1
+      },
+      {
+        "Froots": 1
+      },
+      {
+        "Grandy's": 1
+      },
+      {
+        "Hunam Garden": 1
+      },
+      {
+        "KFC / Taco Bell": 1
+      },
+      {
+        "Kettle Restaurant": 1
+      },
+      {
+        "Kfc": 1
+      },
+      {
+        "Mr Char-Burger": 1
+      },
+      {
+        "P. Terry's": 1
+      },
+      {
+        "Paesano's": 1
+      },
+      {
+        "Panera Bread": 1
+      },
+      {
+        "Papa John's Pizza": 1
+      },
+      {
+        "Pizza Hut": 1
+      },
+      {
+        "Pollo Campero": 1
+      },
+      {
+        "Pollo Tropical": 1
+      },
+      {
+        "Popeye's Chicken & Biscuits": 1
+      },
+      {
+        "Popeyes Chicken & Biscuits": 1
+      },
+      {
+        "Popeyes Louisiana Kitchen": 1
+      },
+      {
+        "Quick": 1
+      },
+      {
+        "Quiznos": 1
+      },
+      {
+        "Raising Cane's Chicken Fingers": 1
+      },
+      {
+        "Rocky's": 1
+      },
+      {
+        "Soulfish Grill": 1
+      },
+      {
+        "Stars Drive-In": 1
+      },
+      {
+        "Stripes Store #2276": 1
+      },
+      {
+        "Taco Cabana": 1
+      },
+      {
+        "Taco Casa": 1
+      },
+      {
+        "Taco John's": 1
+      },
+      {
+        "The People Connection": 1
+      },
+      {
+        "Wingstop": 1
+      },
+      {
+        "Wingstreet": 1
       }
     ],
     "total": 634
   },
   "UT": {
-    "top-3": [
+    "top-n": [
       {
         "McDonald's": 27
       },
@@ -639,12 +5352,114 @@
       },
       {
         "Wendy's": 16
+      },
+      {
+        "Subway": 12
+      },
+      {
+        "Arby's": 10
+      },
+      {
+        "Burger King": 8
+      },
+      {
+        "Taco Bell": 8
+      },
+      {
+        "Jimmy John's": 7
+      },
+      {
+        "KFC": 7
+      },
+      {
+        "Carl's Jr.": 6
+      },
+      {
+        "Del Taco": 5
+      },
+      {
+        "Chick-fil-A": 4
+      },
+      {
+        "Five Guys": 4
+      },
+      {
+        "Arctic Circle": 2
+      },
+      {
+        "Sonic Drive-In": 2
+      },
+      {
+        "Taco Time": 2
+      },
+      {
+        "TacoTime": 2
+      },
+      {
+        "Brixton's": 1
+      },
+      {
+        "Carl's Jr": 1
+      },
+      {
+        "Costa Vida Fresh Mexican Grill": 1
+      },
+      {
+        "Culver's": 1
+      },
+      {
+        "Dairy Queen": 1
+      },
+      {
+        "Granny's Drive-In": 1
+      },
+      {
+        "Iceberg Drive Inn": 1
+      },
+      {
+        "In-N-Out Burger": 1
+      },
+      {
+        "JCW's": 1
+      },
+      {
+        "KFC / A&W": 1
+      },
+      {
+        "Nielsen's Frozen Custard": 1
+      },
+      {
+        "Panda Express": 1
+      },
+      {
+        "Pizza Hut": 1
+      },
+      {
+        "Quiznos": 1
+      },
+      {
+        "Red Robin Gourmet Burgers": 1
+      },
+      {
+        "Rich's Mighty Fine Burgers Grub": 1
+      },
+      {
+        "SONIC Drive In": 1
+      },
+      {
+        "Sconecutter": 1
+      },
+      {
+        "Sonic Drive In": 1
+      },
+      {
+        "Sonic Drive-in": 1
       }
     ],
     "total": 159
   },
   "VA": {
-    "top-3": [
+    "top-n": [
       {
         "McDonald's": 66
       },
@@ -653,12 +5468,123 @@
       },
       {
         "Wendy's": 33
+      },
+      {
+        "Taco Bell": 28
+      },
+      {
+        "Hardee's": 26
+      },
+      {
+        "Arby's": 21
+      },
+      {
+        "Bojangles' Famous Chicken 'n Biscuits": 19
+      },
+      {
+        "KFC": 19
+      },
+      {
+        "Chick-fil-A": 10
+      },
+      {
+        "Sonic Drive-In": 10
+      },
+      {
+        "Subway": 7
+      },
+      {
+        "Pizza Hut": 6
+      },
+      {
+        "Mcdonald's": 5
+      },
+      {
+        "Five Guys": 4
+      },
+      {
+        "Waffle House": 3
+      },
+      {
+        "Dairy Queen": 2
+      },
+      {
+        "Jimmy John's": 2
+      },
+      {
+        "Long John Silver's": 2
+      },
+      {
+        "Long John Silvers": 2
+      },
+      {
+        "Penn Station East Coast Subs": 2
+      },
+      {
+        "Baja Fresh": 1
+      },
+      {
+        "Boston Market": 1
+      },
+      {
+        "Captain D's": 1
+      },
+      {
+        "Captain D's Seafood": 1
+      },
+      {
+        "Chick-Fil-A": 1
+      },
+      {
+        "Cook Out": 1
+      },
+      {
+        "Domino's Pizza": 1
+      },
+      {
+        "Elevation Burger": 1
+      },
+      {
+        "Jimmy Johns": 1
+      },
+      {
+        "Mariu Kebabberia Gastronomica": 1
+      },
+      {
+        "McDonalds": 1
+      },
+      {
+        "Panera Bread": 1
+      },
+      {
+        "Pei Wei": 1
+      },
+      {
+        "Popeye's Chicken & Biscuits": 1
+      },
+      {
+        "Popeyes": 1
+      },
+      {
+        "QDOBA Mexican Eats": 1
+      },
+      {
+        "Quiznos": 1
+      },
+      {
+        "Roy Rogers": 1
+      },
+      {
+        "Sonic Drive In": 1
+      },
+      {
+        "Taco Bell/Pizza Hut Express": 1
       }
     ],
     "total": 327
   },
   "VT": {
-    "top-3": [
+    "top-n": [
       {
         "McDonald's": 16
       },
@@ -667,12 +5593,36 @@
       },
       {
         "Taco Bell": 5
+      },
+      {
+        "SUBWAY": 4
+      },
+      {
+        "Burger King": 3
+      },
+      {
+        "KFC": 2
+      },
+      {
+        "Subway": 2
+      },
+      {
+        "Wendy's": 2
+      },
+      {
+        "Handy's Lunch": 1
+      },
+      {
+        "McDonalds": 1
+      },
+      {
+        "Pacific Rim": 1
       }
     ],
     "total": 43
   },
   "WA": {
-    "top-3": [
+    "top-n": [
       {
         "McDonald's": 39
       },
@@ -681,12 +5631,132 @@
       },
       {
         "Jack in the Box": 20
+      },
+      {
+        "Taco Bell": 20
+      },
+      {
+        "KFC": 13
+      },
+      {
+        "Wendy's": 10
+      },
+      {
+        "Arby's": 9
+      },
+      {
+        "Taco Time": 6
+      },
+      {
+        "Jimmy John's": 5
+      },
+      {
+        "SUBWAY": 5
+      },
+      {
+        "Five Guys": 4
+      },
+      {
+        "Subway": 4
+      },
+      {
+        "McDonalds": 3
+      },
+      {
+        "SONIC Drive In": 3
+      },
+      {
+        "Carl's Jr. / Green Burrito": 2
+      },
+      {
+        "Dairy Queen": 2
+      },
+      {
+        "Domino's Pizza": 2
+      },
+      {
+        "Mcdonald's": 2
+      },
+      {
+        "Old Country Buffet": 2
+      },
+      {
+        "Pizza Hut": 2
+      },
+      {
+        "Popeye's Louisiana Kitchen": 2
+      },
+      {
+        "QDOBA Mexican Eats": 2
+      },
+      {
+        "Quiznos": 2
+      },
+      {
+        "Taco Del Mar": 2
+      },
+      {
+        "Baja Fresh": 1
+      },
+      {
+        "Baskin-Robbins": 1
+      },
+      {
+        "Burger's Landing": 1
+      },
+      {
+        "Carl's Jr.": 1
+      },
+      {
+        "Chick-fil-A": 1
+      },
+      {
+        "Convergence Zone": 1
+      },
+      {
+        "Del Taco": 1
+      },
+      {
+        "Dino's Gyros": 1
+      },
+      {
+        "Eagan's Drive-In": 1
+      },
+      {
+        "Frugal's": 1
+      },
+      {
+        "Frugals": 1
+      },
+      {
+        "Ivar's Seafood Bar": 1
+      },
+      {
+        "Jack In The Box": 1
+      },
+      {
+        "KFC - Kentucky Fried Chicken": 1
+      },
+      {
+        "Panda Express": 1
+      },
+      {
+        "Pita Pit": 1
+      },
+      {
+        "TacoTime": 1
+      },
+      {
+        "The Pizza Pipe Line": 1
+      },
+      {
+        "Zip's Hamburgers And Fish": 1
       }
     ],
     "total": 209
   },
   "WI": {
-    "top-3": [
+    "top-n": [
       {
         "McDonald's": 35
       },
@@ -695,12 +5765,105 @@
       },
       {
         "Arby's": 19
+      },
+      {
+        "Taco Bell": 18
+      },
+      {
+        "KFC": 11
+      },
+      {
+        "Hardee's": 10
+      },
+      {
+        "McDonalds": 10
+      },
+      {
+        "Jimmy John's": 9
+      },
+      {
+        "Culver's": 7
+      },
+      {
+        "Taco John's": 6
+      },
+      {
+        "Wendy's": 4
+      },
+      {
+        "Dairy Queen": 3
+      },
+      {
+        "Subway": 3
+      },
+      {
+        "Mcdonald's": 2
+      },
+      {
+        "SUBWAY": 2
+      },
+      {
+        "Topper's Pizza": 2
+      },
+      {
+        "A & W Family Restaurant": 1
+      },
+      {
+        "A&W All-American Food": 1
+      },
+      {
+        "Arby's Antigo": 1
+      },
+      {
+        "Boston Market": 1
+      },
+      {
+        "Chick-Fil-A": 1
+      },
+      {
+        "Chick-fil-A": 1
+      },
+      {
+        "Church's Chicken": 1
+      },
+      {
+        "Cousins Subs": 1
+      },
+      {
+        "Cousins Subs of Green Bay - Oneida St. & Ramada Way": 1
+      },
+      {
+        "Domino's Pizza": 1
+      },
+      {
+        "Jersey Mike's Subs": 1
+      },
+      {
+        "Madison Street Subs": 1
+      },
+      {
+        "Mario's Natural Roman Pizza": 1
+      },
+      {
+        "Osgood's": 1
+      },
+      {
+        "Pizza Hut": 1
+      },
+      {
+        "Quiznos": 1
+      },
+      {
+        "Shepard's Drive-In": 1
+      },
+      {
+        "Tom's Drive In": 1
       }
     ],
     "total": 186
   },
   "WV": {
-    "top-3": [
+    "top-n": [
       {
         "McDonald's": 18
       },
@@ -709,12 +5872,72 @@
       },
       {
         "Arby's": 10
+      },
+      {
+        "Burger King": 10
+      },
+      {
+        "Domino's Pizza": 7
+      },
+      {
+        "Hardee's": 4
+      },
+      {
+        "Subway": 4
+      },
+      {
+        "Taco Bell": 4
+      },
+      {
+        "Chick-fil-A": 3
+      },
+      {
+        "KFC": 3
+      },
+      {
+        "Pizza Hut": 3
+      },
+      {
+        "SUBWAY": 3
+      },
+      {
+        "Quiznos": 2
+      },
+      {
+        "Bob Evans": 1
+      },
+      {
+        "Dairy Queen": 1
+      },
+      {
+        "Fazoli's": 1
+      },
+      {
+        "Kentucky Fried Chicken": 1
+      },
+      {
+        "Long John Silver's": 1
+      },
+      {
+        "McDonalds": 1
+      },
+      {
+        "Rally's": 1
+      },
+      {
+        "Steak 'n Shake": 1
+      },
+      {
+        "Steak Escape": 1
+      },
+      {
+        "Tudor's Biscuit World": 1
       }
     ],
     "total": 93
   },
   "WY": {
-    "top-3": [
+    "top-n": [
       {
         "Subway": 7
       },
@@ -723,6 +5946,39 @@
       },
       {
         "McDonald's": 5
+      },
+      {
+        "Burger King": 4
+      },
+      {
+        "Taco Bell": 4
+      },
+      {
+        "Arby's": 3
+      },
+      {
+        "Wendy's": 3
+      },
+      {
+        "Jimmy John's": 2
+      },
+      {
+        "Taco John's": 2
+      },
+      {
+        "Chick-Fil-A": 1
+      },
+      {
+        "Dairy Queen": 1
+      },
+      {
+        "Hardee's": 1
+      },
+      {
+        "SONIC Drive In": 1
+      },
+      {
+        "Sonic Drive-In": 1
       }
     ],
     "total": 41
