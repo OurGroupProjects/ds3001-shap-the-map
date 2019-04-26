@@ -134,9 +134,23 @@ function onDataLoad(e) {
     this.update();
     return this._div;
   };
+
+
+
+  // Helper function to reference the JSON data
+  function getTopChains(stateLongName, index) {
+      const stateAbbrev = nameToAbrev[stateLongName];
+      const stateRank = stateData[stateAbbrev];
+
+      return Object.keys(stateRank["top-n"][index]);
+  }
+
   info.update = function (props) {
-    this._div.innerHTML = '<h4>US Population Density</h4>' + (props ?
-        '<b>' + props.name + '</b><br />' + props.density + ' people / mi<sup>2</sup>'
+
+    this._div.innerHTML = '<h4>Top Food Chains</h4>' + (props ?
+        '<b>' + Object.values(props)[0] + '</b><br />' + '</b><br />' + '1. ' + getTopChains(Object.values(props)[0], 0)+ '</b><br />' +
+                                                                        '2. ' + getTopChains(Object.values(props)[0], 1)+ '</b><br />' +
+                                                                        '3. ' + getTopChains(Object.values(props)[0], 2)+ '</b><br />'
         : 'Hover over a state');
   };
   info.addTo(map);
