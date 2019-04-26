@@ -184,7 +184,7 @@ function getStateColor(stateLongName) {
   const stateAbbrev = nameToAbrev[stateLongName];
   const stateRank = stateData[stateAbbrev];
 
-  const stateFirst = stateRank["top-3"][0];
+  const stateFirst = stateRank["top-n"][0];
   const stateRatio = Object.values(stateFirst)[0]/stateRank["total"];
   const stateColor = restColors[Object.keys(stateFirst)[0]];
 
