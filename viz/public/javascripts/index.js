@@ -110,7 +110,8 @@ function onDataLoad(e) {
   const geoJSONPane = map.createPane("geoPane");
   const markerPane = map.createPane("markerPane");
   stateData = JSON.parse(e[0].responseText);
-  const foodLocData = e[1].responseText.split(/\r\n+/g).slice(1).map(x => x.split(","));
+  const rawData = e[1].responseText.replace("\r", "");
+  const foodLocData = rawData.split(/\n+/g).slice(1).map(x => x.split(","));
   // switch canvas to svg for diesired outcome (SUUUPER LAGGY tho), have to change pointer-event css to visiblePainted
   const markerRenderer = L.canvas({padding:0.5, pane:"markerPane"});
 
