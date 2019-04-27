@@ -108,6 +108,7 @@ Promise.all([makeRequest("/foodRankData", "GET"), makeRequest("/foodLocData", "G
 function onDataLoad(e) {
     markerRenderer = L.canvas({padding:0.5, pane:"markerPane"});
     map = L.map('map', { layers: [markerRenderer]}).setView([37.8, -96], 4);
+    map.doubleClickZoom.disable();
     const geoJSONPane = map.createPane("geoPane");
     const markerPane = map.createPane("markerPane");
     stateData = JSON.parse(e[0].responseText);
