@@ -213,6 +213,7 @@ function createCustomForm() {
         let formStr = "";
         formStr += '<form><input id="markerToggle" type="checkbox"/>Show Markers</form>';
         formStr += '<div class="leaflet-control-layers-separator"></div>';
+        formStr += '<span><b>Filter out:</b></span>';
         for (let chain of Object.keys(restColors)) {
             formStr += '<form><input id=' + chain + ' type="checkbox"/>' + chain + '</form>'
         }
