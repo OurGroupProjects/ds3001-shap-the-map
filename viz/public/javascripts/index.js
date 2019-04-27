@@ -17,7 +17,7 @@ const restColors = {
     "Subway": "#005542",
     "SONIC Drive In": "#a6dba0",
     "Domino's Pizza": "#762a83",
-    "Taco John's": "#35978f",
+    "Taco John's": "#cbc600",
 };
 
 const nameToAbrev =
@@ -207,11 +207,12 @@ function onDataLoad(e) {
 }
 
 function createCustomForm() {
-    let silenceVoicesBox = L.control({position: 'bottomright'});
+    let silenceVoicesBox = L.control({position: 'topright'});
     silenceVoicesBox.onAdd = function(map){
-        let div = L.DomUtil.create('div', 'command');
+        let div = L.DomUtil.create('div', 'info command');
         let formStr = "";
         formStr += '<form><input id="markerToggle" type="checkbox"/>Show Markers</form>';
+        formStr += '<div class="leaflet-control-layers-separator"></div>';
         for (let chain of Object.keys(restColors)) {
             formStr += '<form><input id=' + chain + ' type="checkbox"/>' + chain + '</form>'
         }
