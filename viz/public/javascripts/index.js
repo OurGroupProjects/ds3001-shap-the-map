@@ -1,4 +1,6 @@
 let geojson;
+let foodCircles = [];
+let markerRenderer;
 let map;
 let stateData;
 let maxRatio;
@@ -104,7 +106,7 @@ const makeRequest = function (url, method) {
 Promise.all([makeRequest("/foodRankData", "GET"), makeRequest("/foodLocData", "GET")]).then(onDataLoad);
 
 function onDataLoad(e) {
-    const markerRenderer = L.canvas({padding:0.5, pane:"markerPane"});
+    markerRenderer = L.canvas({padding:0.5, pane:"markerPane"});
     map = L.map('map', { layers: [markerRenderer]}).setView([37.8, -96], 4);
     const geoJSONPane = map.createPane("geoPane");
     const markerPane = map.createPane("markerPane");
@@ -161,7 +163,7 @@ function onDataLoad(e) {
     map.attributionControl.addAttribution('Population data &copy; <a href="http://census.gov/">US Census Bureau</a>');
 
     // Setup Markers
-    let foodCircles = [];
+    foodCircles = [];
     for (let store of foodLocData) {
         let markerColor = "#00000080";
         if(!store[HeadersEnum.LATITUDE] || !store[HeadersEnum.LONGITUDE]){
@@ -179,8 +181,7 @@ function onDataLoad(e) {
         foodCircles.push(foodCircle);
         foodCircle.addTo(map).bindPopup("<b>" + store[HeadersEnum.FULL_NAME] + "</b></br>" + store[HeadersEnum.CITY] + ", " + store[HeadersEnum.PROVINCE])
     }
-    let layerControl = L.control.layers().addTo(map);
-    layerControl.addOverlay(markerRenderer, "Restaurant Location Markers");
+
     createCustomForm();
     initListeners(foodCircles);
 }
@@ -190,6 +191,7 @@ function createCustomForm() {
     silenceVoicesBox.onAdd = function(map){
         let div = L.DomUtil.create('div', 'command');
         let formStr = "";
+        formStr += '<form><input id="markerToggle" type="checkbox"/>Show Markers</form>';
         for (let chain of Object.keys(restColors)) {
             formStr += '<form><input id=' + chain + ' type="checkbox"/>' + chain + '</form>'
         }
@@ -199,14 +201,22 @@ function createCustomForm() {
     silenceVoicesBox.addTo(map);
 
     function handleCheck(e) {
-        const chainName = e.target.parentElement.innerText;
-        if (e.target.checked) {
-            ignoreChain.add(chainName);
+        if (e.target.id === "markerToggle"){
+            if (e.target.checked) {
+                document.styleSheets[1].cssRules[1].style.display = "block";
+            } else {
+                document.styleSheets[1].cssRules[1].style.display = "none";
+            }
         } else {
-            ignoreChain.delete(chainName);
+            const chainName = e.target.parentElement.innerText;
+            if (e.target.checked) {
+                ignoreChain.add(chainName);
+            } else {
+                ignoreChain.delete(chainName);
+            }
+            updateMinMaxRatio();
+            drawMap();
         }
-        updateMinMaxRatio();
-        drawMap();
     }
 
     document.getElementsByClassName("command")[0].addEventListener("click", handleCheck, false);
