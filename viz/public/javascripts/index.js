@@ -2,20 +2,20 @@ let geojson;
 let map;
 let stateData;
 let maxRatio;
-let ignoreChain = [];
+let ignoreChain = new Set();
 const info = L.control();
 const HeadersEnum = Object.freeze({"NAME":0, "CITY":1, "PROVINCE":2, "POSTALCODE":3, "LATITUDE":4, "LONGITUDE":5, "FULL_NAME":6});
 const restColors = {
     "McDonald's": "#1f77b4",
-    "Arby's": "#ff7f0e",
     "Burger King": "#2ca02c",
-    "Domino's Pizza": "#d62728",
-    "SONIC Drive In": "#9467bd",
-    "Taco John's": "#8c564b",
-    "Subway": "#e377c2",
-    "KFC": "#7f7f7f",
     "Taco Bell": "#bcbd22",
-    "Wendy's": "#17becf"
+    "Wendy's": "#17becf",
+    "Arby's": "#ff7f0e",
+    "KFC": "#7f7f7f",
+    "Subway": "#e377c2",
+    "SONIC Drive In": "#9467bd",
+    "Domino's Pizza": "#d62728",
+    "Taco John's": "#8c564b",
 };
 
 const nameToAbrev =
@@ -112,8 +112,6 @@ function onDataLoad(e) {
     updateMinMaxRatio();
     const rawData = e[1].responseText.replace("\r", "");
     const foodLocData = rawData.split(/\n+/g).slice(1).map(x => x.split(","));
-    // switch canvas to svg for diesired outcome (SUUUPER LAGGY tho), have to change pointer-event css to visiblePainted
-
 
     // put map behind points
     geoJSONPane.style.zIndex = 350;
@@ -159,11 +157,7 @@ function onDataLoad(e) {
     };
     info.addTo(map);
 
-    geojson = L.geoJson(statesData, {
-        style: style,
-        onEachFeature: onEachFeature,
-        pane: "geoPane"
-    }).addTo(map);
+    drawMap();
     map.attributionControl.addAttribution('Population data &copy; <a href="http://census.gov/">US Census Bureau</a>');
 
     // Setup Markers
@@ -187,7 +181,35 @@ function onDataLoad(e) {
     }
     let layerControl = L.control.layers().addTo(map);
     layerControl.addOverlay(markerRenderer, "Restaurant Location Markers");
+    createCustomForm();
     initListeners(foodCircles);
+}
+
+function createCustomForm() {
+    let silenceVoicesBox = L.control({position: 'bottomright'});
+    silenceVoicesBox.onAdd = function(map){
+        let div = L.DomUtil.create('div', 'command');
+        let formStr = "";
+        for (let chain of Object.keys(restColors)) {
+            formStr += '<form><input id=' + chain + ' type="checkbox"/>' + chain + '</form>'
+        }
+        div.innerHTML = formStr;
+        return div;
+    };
+    silenceVoicesBox.addTo(map);
+
+    function handleCheck(e) {
+        const chainName = e.target.parentElement.innerText;
+        if (e.target.checked) {
+            ignoreChain.add(chainName);
+        } else {
+            ignoreChain.delete(chainName);
+        }
+        updateMinMaxRatio();
+        drawMap();
+    }
+
+    document.getElementsByClassName("command")[0].addEventListener("click", handleCheck, false);
 }
 
 function style(feature) {
@@ -236,7 +258,7 @@ function getStateFilteredFirst(stateAbbrev) {
     const stateRank = stateData[stateAbbrev];
 
     let stateFirst = stateRank["top-n"][0];
-    for(let i=1; ignoreChain.includes(Object.keys(stateFirst)[0]); i++) {
+    for(let i=1; ignoreChain.has(Object.keys(stateFirst)[0]); i++) {
         if(i >= stateRank["top-n"].length) {
             return false
         }
@@ -278,6 +300,17 @@ function onEachFeature(feature, layer) {
         click: zoomToFeature
     });
 }
+
+drawMap = () => {
+    if (geojson) {
+        map.removeLayer(geojson);
+    }
+    geojson =  L.geoJson(statesData, {
+        style: style,
+        onEachFeature: onEachFeature,
+        pane: "geoPane"
+    }).addTo(map);
+};
 
 initListeners = (foodCircles) => {
     document.body.onkeydown = (e) => {
