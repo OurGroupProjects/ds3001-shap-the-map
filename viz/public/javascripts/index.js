@@ -104,7 +104,6 @@ const makeRequest = function (url, method) {
 // Load data files, then draw map
 Promise.all([makeRequest("/foodRankData", "GET"), makeRequest("/foodLocData", "GET")]).then(onDataLoad);
 
-
 function onDataLoad(e) {
   map = L.map('map').setView([37.8, -96], 4);
   const geoJSONPane = map.createPane("geoPane");
@@ -235,7 +234,6 @@ function updateMinMaxRatio() {
   maxRatio = Math.max(...state_ratios);
 }
 
-
 function highlightFeature(e) {
   var layer = e.target;
 
@@ -285,7 +283,6 @@ initListeners = (foodCircles) => {
       }
       markersOn = !markersOn;
     }
-
   };
 
   document.body.onkeyup = function (e) {
@@ -297,7 +294,6 @@ initListeners = (foodCircles) => {
       }
       document.styleSheets[1].cssRules[1].style.pointerEvents="none";
     }
-
   };
 };
 
