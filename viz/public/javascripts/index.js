@@ -204,7 +204,7 @@ function getStateColor(stateLongName) {
     for(let i=1; ignoreChain.includes(Object.keys(stateFirst)[0]); i++) {
         if(i >= stateRank["top-n"].length) {
             return {
-                fillOpacity: 1,
+                fillOpacity: 0,
                 fillColor: "#ffffff"
             }
         }
