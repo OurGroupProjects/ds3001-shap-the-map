@@ -2,7 +2,6 @@ let markersOn = false;
 let geojson;
 let map;
 let stateData;
-let minRatio;
 let maxRatio;
 let ignoreChain = [];
 const info = L.control();
@@ -219,7 +218,7 @@ function getStateColor(stateLongName) {
   }
 
   return {
-    fillOpacity: (stateRatio-minRatio)/(maxRatio-minRatio),
+    fillOpacity: stateRatio/maxRatio,
     fillColor: stateColor
   };
 }
@@ -233,7 +232,6 @@ function updateMinMaxRatio() {
     }
     return Object.values(stateFirst)[0]/stateRank["total"];
   });
-  minRatio = Math.min(...state_ratios);
   maxRatio = Math.max(...state_ratios);
 }
 
