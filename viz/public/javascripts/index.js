@@ -146,11 +146,15 @@ function onDataLoad(e) {
 
     info.update = function (props) {
         this._div.innerHTML = '<h4>Top Food Chains</h4>' + (props ?
-            '<b>' + Object.values(props)[0] + '</b><br />' + '</b><br />' +
-            '1. ' + getTopChains(Object.values(props)[0], 0)+ '</b><br />' +
-            '2. ' + getTopChains(Object.values(props)[0], 1)+ '</b><br />' +
-            '3. ' + getTopChains(Object.values(props)[0], 2)+ '</b><br />' +
-            '<b>Total</b>: ' + stateData[nameToAbrev[Object.values(props)[0]]]['total']+ '</b><br />'
+            '<b>' + Object.values(props)[0] + '</b><br />' + '<br />' +
+            '<b>Filtered Top:</b><br />' + Object.keys(getStateFilteredFirst(nameToAbrev[Object.values(props)[0]]))[0]+ '<br />' +
+            '<br />' +
+            'Top Chains:' + '<br />' +
+            '1. ' + getTopChains(Object.values(props)[0], 0)+ '<br />' +
+            '2. ' + getTopChains(Object.values(props)[0], 1)+ '<br />' +
+            '3. ' + getTopChains(Object.values(props)[0], 2)+ '<br />' +
+            '...' + '<br />' +
+            '<b>Total Locations</b>: ' + stateData[nameToAbrev[Object.values(props)[0]]]['total']+ '<br />'
             : 'Hover over a state');
     };
     info.addTo(map);
@@ -200,16 +204,11 @@ function getStateColor(stateLongName) {
     const stateAbbrev = nameToAbrev[stateLongName];
     const stateRank = stateData[stateAbbrev];
 
-    let stateFirst = stateRank["top-n"][0];
-    for(let i=1; ignoreChain.includes(Object.keys(stateFirst)[0]); i++) {
-        if(i >= stateRank["top-n"].length) {
-            return {
-                fillOpacity: 0,
-                fillColor: "#ffffff"
-            }
-        }
-        stateFirst = stateRank["top-n"][i];
-    }
+    let stateFirst = getStateFilteredFirst(stateAbbrev);
+    if(!stateFirst) return {
+        fillOpacity: 0,
+        fillColor: '#ffffff'
+    };
     const stateRatio = Object.values(stateFirst)[0]/stateRank["total"];
 
     let stateColor = "#000000";
@@ -226,13 +225,24 @@ function getStateColor(stateLongName) {
 function updateMinMaxRatio() {
     let state_ratios = Object.entries(stateData).map(el => {
         let stateRank = el[1];
-        let stateFirst = stateRank["top-n"][0];
-        for(let i=1; ignoreChain.includes(Object.keys(stateFirst)[0]); i++) {
-            stateFirst = stateRank["top-n"][i];
-        }
+        let stateFirst = getStateFilteredFirst(el[0]);
+        if(!stateFirst) return 0;
         return Object.values(stateFirst)[0]/stateRank["total"];
     });
     maxRatio = Math.max(...state_ratios);
+}
+
+function getStateFilteredFirst(stateAbbrev) {
+    const stateRank = stateData[stateAbbrev];
+
+    let stateFirst = stateRank["top-n"][0];
+    for(let i=1; ignoreChain.includes(Object.keys(stateFirst)[0]); i++) {
+        if(i >= stateRank["top-n"].length) {
+            return false
+        }
+        stateFirst = stateRank["top-n"][i];
+    }
+    return stateFirst
 }
 
 function highlightFeature(e) {
