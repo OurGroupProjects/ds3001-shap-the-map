@@ -2,8 +2,9 @@ let markersOn = false;
 let geojson;
 let map;
 let stateData;
-const minRatio = 0.111111111111111111;
-const maxRatio = 0.37209302325581395;
+let minRatio;
+let maxRatio;
+let ignoreChain = [];
 const info = L.control();
 const HeadersEnum = Object.freeze({"NAME":0, "CITY":1, "PROVINCE":2, "POSTALCODE":3, "LATITUDE":4, "LONGITUDE":5, "FULL_NAME":6});
 const restColors = {
@@ -110,6 +111,7 @@ function onDataLoad(e) {
   const geoJSONPane = map.createPane("geoPane");
   const markerPane = map.createPane("markerPane");
   stateData = JSON.parse(e[0].responseText);
+  updateMinMaxRatio();
   const rawData = e[1].responseText.replace("\r", "");
   const foodLocData = rawData.split(/\n+/g).slice(1).map(x => x.split(","));
   // switch canvas to svg for diesired outcome (SUUUPER LAGGY tho), have to change pointer-event css to visiblePainted
@@ -134,8 +136,6 @@ function onDataLoad(e) {
     this.update();
     return this._div;
   };
-
-
 
   // Helper function to reference the JSON data
   function getTopChains(stateLongName, index) {
@@ -201,16 +201,42 @@ function getStateColor(stateLongName) {
   const stateAbbrev = nameToAbrev[stateLongName];
   const stateRank = stateData[stateAbbrev];
 
-  const stateFirst = stateRank["top-n"][0];
+  let stateFirst = stateRank["top-n"][0];
+  for(let i=1; ignoreChain.includes(Object.keys(stateFirst)[0]); i++) {
+    if(i >= stateRank["top-n"].length) {
+      return {
+        fillOpacity: 1,
+        fillColor: "#ffffff"
+      }
+    }
+    stateFirst = stateRank["top-n"][i];
+  }
   const stateRatio = Object.values(stateFirst)[0]/stateRank["total"];
-  const stateColor = restColors[Object.keys(stateFirst)[0]];
 
+  let stateColor = "#000000";
+  if(Object.keys(restColors).includes(Object.keys(stateFirst)[0])) {
+    stateColor = restColors[Object.keys(stateFirst)[0]];
+  }
 
   return {
     fillOpacity: (stateRatio-minRatio)/(maxRatio-minRatio),
     fillColor: stateColor
   };
 }
+
+function updateMinMaxRatio() {
+  let state_ratios = Object.entries(stateData).map(el => {
+    let stateRank = el[1];
+    let stateFirst = stateRank["top-n"][0];
+    for(let i=1; ignoreChain.includes(Object.keys(stateFirst)[0]); i++) {
+      stateFirst = stateRank["top-n"][i];
+    }
+    return Object.values(stateFirst)[0]/stateRank["total"];
+  });
+  minRatio = Math.min(...state_ratios);
+  maxRatio = Math.max(...state_ratios);
+}
+
 
 function highlightFeature(e) {
   var layer = e.target;
