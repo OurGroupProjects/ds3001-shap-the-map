@@ -8,16 +8,16 @@ let ignoreChain = new Set();
 const info = L.control();
 const HeadersEnum = Object.freeze({"NAME":0, "CITY":1, "PROVINCE":2, "POSTALCODE":3, "LATITUDE":4, "LONGITUDE":5, "FULL_NAME":6});
 const restColors = {
-    "McDonald's": "#1f77b4",
-    "Burger King": "#2ca02c",
-    "Taco Bell": "#bcbd22",
-    "Wendy's": "#17becf",
-    "Arby's": "#ff7f0e",
-    "KFC": "#7f7f7f",
-    "Subway": "#e377c2",
-    "SONIC Drive In": "#9467bd",
-    "Domino's Pizza": "#d62728",
-    "Taco John's": "#8c564b",
+    "McDonald's": "#dd1021",
+    "Burger King": "#185494",
+    "Taco Bell": "#ff7f0e",
+    "Wendy's": "#8ED5E6",
+    "Arby's": "#ef1897",
+    "KFC": "#8c564b",
+    "Subway": "#005542",
+    "SONIC Drive In": "#a6dba0",
+    "Domino's Pizza": "#762a83",
+    "Taco John's": "#35978f",
 };
 
 const nameToAbrev =
@@ -161,6 +161,26 @@ function onDataLoad(e) {
 
     drawMap();
     map.attributionControl.addAttribution('Population data &copy; <a href="http://census.gov/">US Census Bureau</a>');
+
+    var legend = L.control({position: 'bottomleft'});
+
+    legend.onAdd = function (map) {
+
+        var div = L.DomUtil.create('div', 'info legend'),
+            labels = [];
+
+        // loop through our density intervals and generate a label with a colored square for each interval
+        for (var i = 0; i < 10; i++) {
+            labels.push(
+                '<i style="background:' + Object.values(restColors)[i] + '"></i> ' +
+                Object.keys(restColors)[i]);
+        }
+
+        div.innerHTML = labels.join('<br><br>');
+        return div;
+    };
+
+    legend.addTo(map);
 
     // Setup Markers
     foodCircles = [];
