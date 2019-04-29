@@ -5,6 +5,7 @@ let map;
 let stateData;
 let maxRatio;
 let ignoreChain = new Set();
+let foodLocData;
 const info = L.control();
 const HeadersEnum = Object.freeze({"NAME":0, "CITY":1, "PROVINCE":2, "POSTALCODE":3, "LATITUDE":4, "LONGITUDE":5, "FULL_NAME":6});
 const restColors = {
@@ -114,7 +115,7 @@ function onDataLoad(e) {
     stateData = JSON.parse(e[0].responseText);
     updateMinMaxRatio();
     const rawData = e[1].responseText.replace("\r", "");
-    const foodLocData = rawData.split(/\n+/g).slice(1).map(x => x.split(","));
+    foodLocData = rawData.split(/\n+/g).slice(1).map(x => x.split(","));
 
     // put map behind points
     geoJSONPane.style.zIndex = 350;
@@ -182,29 +183,34 @@ function onDataLoad(e) {
     };
 
     legend.addTo(map);
+    createMarkers(foodLocData);
+    createCustomForm();
+}
 
+function createMarkers(foodLocData) {
     // Setup Markers
     foodCircles = [];
+    debugger;
     for (let store of foodLocData) {
-        let markerColor = "#00000080";
-        if(!store[HeadersEnum.LATITUDE] || !store[HeadersEnum.LONGITUDE]){
-            console.log("PANIC");
+        if (!ignoreChain.has(store[HeadersEnum.NAME])) {
+            let markerColor = "#00000080";
+            if (!store[HeadersEnum.LATITUDE] || !store[HeadersEnum.LONGITUDE]) {
+                console.log("PANIC");
+            }
+            if (store[HeadersEnum.NAME] in restColors) {
+                markerColor = restColors[store[HeadersEnum.NAME]];
+            }
+            const foodCircle = L.circleMarker([store[HeadersEnum.LATITUDE], store[HeadersEnum.LONGITUDE]],
+                {
+                    renderer: markerRenderer,
+                    color: markerColor
+                });
+            foodCircle.setRadius(.25);
+            foodCircles.push(foodCircle);
+            foodCircle.addTo(map).bindPopup("<b>" + store[HeadersEnum.FULL_NAME] + "</b></br>" + store[HeadersEnum.CITY] + ", " + store[HeadersEnum.PROVINCE])
         }
-        if(store[HeadersEnum.NAME] in restColors) {
-            markerColor = restColors[store[HeadersEnum.NAME]];
-        }
-        const foodCircle = L.circleMarker([store[HeadersEnum.LATITUDE], store[HeadersEnum.LONGITUDE]],
-            {
-                renderer: markerRenderer,
-                color: markerColor
-            });
-        foodCircle.setRadius(.25);
-        foodCircles.push(foodCircle);
-        foodCircle.addTo(map).bindPopup("<b>" + store[HeadersEnum.FULL_NAME] + "</b></br>" + store[HeadersEnum.CITY] + ", " + store[HeadersEnum.PROVINCE])
     }
-
-    createCustomForm();
-    initListeners(foodCircles);
+    initListeners()
 }
 
 function createCustomForm() {
@@ -237,6 +243,7 @@ function createCustomForm() {
             } else {
                 ignoreChain.delete(chainName);
             }
+            drawMarkers();
             updateMinMaxRatio();
             drawMap();
         }
@@ -343,6 +350,14 @@ drawMap = () => {
         onEachFeature: onEachFeature,
         pane: "geoPane"
     }).addTo(map);
+};
+
+drawMarkers = () => {
+    if (markerRenderer) {
+        map.removeLayer(markerRenderer);
+    }
+    markerRenderer = L.canvas({padding:0.5, pane:"markerPane"});
+    createMarkers(foodLocData);
 };
 
 initListeners = (foodCircles) => {
